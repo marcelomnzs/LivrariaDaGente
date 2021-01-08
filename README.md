@@ -1,7 +1,7 @@
 # LivrariaDaGente
-  ![Logo da Livraria]https://ibb.co/QDNqB8x
+  ![Logo da Livraria](https://ibb.co/QDNqB8x)
   
-###Repositório destinado ao projeto da disciplina de *Projeto da cadeira de Projeto e Desenvolvimento 1 - IFPE - TSI  Campus Igarassu*
+### Repositório destinado ao projeto da disciplina de *Projeto da cadeira de Projeto e Desenvolvimento 1 - IFPE - TSI  Campus Igarassu*
 
 ## Integrantes do Grupo:
 - **Aline Venceslau** - *TSI*
