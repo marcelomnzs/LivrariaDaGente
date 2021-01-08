@@ -1,5 +1,5 @@
-# LivrariaDaGente
-  ![Logo da Livraria](https://ibb.co/QDNqB8x)
+# Livraria Da Gente
+  ![Logo da Livraria](https://ibb.co/ZcGg56W)
   
 ### Repositório destinado ao projeto da disciplina de *Projeto da cadeira de Projeto e Desenvolvimento 1 - IFPE - TSI  Campus Igarassu*
 
