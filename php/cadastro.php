@@ -20,11 +20,11 @@
     </div>
     <div id="senha">
       <label for="senha">Senha:</label>
-      <input type="senha" class="form-control" id="senha" placeholder="Senha" name="senha">
+      <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha">
     </div>
     <div id="confirmar-senha">
       <label for="senha">Confirmar Senha:</label>
-      <input type="senha" class="form-control" id="senha" placeholder="confirmar senha" name="senha">
+      <input type="password" class="form-control" id="senha" placeholder="confirmar senha" name="senha">
     </div>
     <button type="submit" class="btn">Cadastrar-se</button>
   </form>
