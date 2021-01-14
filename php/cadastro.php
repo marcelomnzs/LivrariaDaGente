@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Cadastro</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="cadastro.css">
- 
-</head>
-<body>
-  <img src="logo.png">
-<div class="container">
-  <form>
-    <div id="usuario">
-      <label for="nome">Nome de Usuário:</label>
-      <input type="nome" class="form-control" id="nome" placeholder="Nome de Usuário" name="nome">
-    </div>
-    <div id="email">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="ex@gmail.com" name="email">
-    </div>
-    <div id="senha">
-      <label for="senha">Senha:</label>
-      <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha">
-    </div>
-    <div id="confirmar-senha">
-      <label for="senha">Confirmar Senha:</label>
-      <input type="password" class="form-control" id="senha" placeholder="confirmar senha" name="senha">
-    </div>
-    <button type="submit" class="btn">Cadastrar-se</button>
-  </form>
-  <h4>Já é cadastrado? Clique <a href="#">aqui!</a></h4>
-</div>
-
-</body>
+<html lang="pt-br">
+  <head>
+    <title>Livraria da Gente</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <!-- Link para o ícone da aba -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-96x96.png">
+  </head>
+  <body>
+    <img src="../img/Triângulo.png" alt="Detalhes de Triângulos Azuis" id="triangulos">
+    <img src="../img/logo-login.png" alt="Logo da Livraria da Gente" id="logo">
+      <form>
+        <!-- A classe campo é relativo à os todos os campos de entrada -->
+        <div class="campo">  
+          <label for="text" id="usuario">Nome de Usuário:</label>
+          <input type="text" id="usuario" placeholder="Ex: João Silva" name="senha">
+        </div>
+        <div class="campo">  
+            <label for="email" id="email">E-mail:</label>
+            <input type="email" id="email" placeholder="example@email.com" name="email">
+        </div>
+        <div class="campo">
+          <label for="pwd" id="senha">Senha:</label>
+          <input type="password" id="senha" placeholder="Digite sua Senha" name="senha">
+        </div>
+        <div class="campo">  
+          <label for="pwd" id="confirma">Confirme sua Senha:</label>
+          <input type="password" id="confirma" placeholder="Confirme sua Senha" name="confirma">
+        </div>
+        <button type="submit" class="btn">ENTRAR</button>
+      </form>
+      <h5>Já é cadastrado? <a href="#">Entrar</a></h5>
+  </body>
 </html>
