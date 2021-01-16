@@ -11,7 +11,7 @@
   <body>
     <img src="img/Triângulo.png" alt="Detalhes de Triângulos Azuis" id="triangulos">
     <img src="img/logo-login.png" alt="Logo da Livraria da Gente" id="logo">
-      <form>
+      <form action="validlogin.php" method="POST">
         <!-- A classe campo é relativo à os todos os campos de entrada -->
         <div class="campo">  
           <label for="email" id="email">E-mail:</label>
