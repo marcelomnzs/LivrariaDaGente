@@ -11,11 +11,11 @@
   <body>
     <img src="../img/Triângulo.png" alt="Detalhes de Triângulos Azuis" id="triangulos">
     <img src="../img/logo-login.png" alt="Logo da Livraria da Gente" id="logo">
-      <form>
+      <form action="dados.php" method="POST">
         <!-- A classe campo é relativo à os todos os campos de entrada -->
         <div class="campo">  
           <label for="text" id="usuario">Nome de Usuário:</label>
-          <input type="text" id="usuario" placeholder="Ex: João Silva" name="senha">
+          <input type="text" id="usuario" placeholder="Ex: João Silva" name="nomeUsuario">
         </div>
         <div class="campo">  
             <label for="email" id="email">E-mail:</label>
@@ -31,6 +31,6 @@
         </div>
         <button type="submit" class="btn">ENTRAR</button>
       </form>
-      <h5>Já é cadastrado? <a href="#">Entrar</a></h5>
+      <h5>Já é cadastrado? <a href="../login.php">Entrar</a></h5>
   </body>
 </html>

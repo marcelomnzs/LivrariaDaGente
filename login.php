@@ -23,6 +23,6 @@
         </div>
         <button type="submit" class="btn">ENTRAR</button>
       </form>
-      <h5>Ainda não é cadastrado? Cadastre-se <a href="#">aqui!</a></h5>
+      <h5>Ainda não é cadastrado? Cadastre-se <a href="php/cadastro.php">aqui!</a></h5>
   </body>
 </html>
