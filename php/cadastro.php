@@ -31,6 +31,6 @@
         </div>
         <button type="submit" class="btn">ENTRAR</button>
       </form>
-      <h5>Já é cadastrado? <a href="../login.php">Entrar</a></h5>
+      <h5>Já é cadastrado? <a href="login.php">Entrar</a></h5>
   </body>
 </html>
