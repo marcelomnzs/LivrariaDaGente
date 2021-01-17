@@ -1,0 +1,151 @@
+/*Import da Font-Family Lato (com o estilo Bold)*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+/*Estilização do Navbar*/
+div#navbar{
+    height: 80px;
+    background-color: #d0e8f0;
+    position: relative;
+}
+
+img#logo{
+    position: relative;
+    height: 70px;
+    width: 40px;
+    top:3px;
+    left: 35px;
+}
+
+a#cadastrar{
+    background-color: #27436F;
+    position: relative;
+    border: none;
+    width:100px;
+    padding: 8px;
+    padding-bottom:6px;
+    color:white;
+    font-size: 10pt;
+    left: 84.89%;
+    bottom: 24.5px;
+    font-family: 'Lato',sans-serif;
+    font-size: 12.5pt;
+    text-decoration: none;
+}
+
+h4#entrar{
+    position: relative;
+    left: 82.5%;
+    bottom: 45.5px;
+    width: 6px;
+    font-size:13.2pt;
+}
+
+h4 a{
+    text-decoration: none;
+    color:black;
+}
+
+/*Estilização do rodapé*/
+    footer#rodape{
+        position: relative;
+        background-color: #d0e8f0;
+        top:479px; 
+        height: 65.5px;
+        overflow:hidden;
+    }
+
+    .botoes{
+        overflow: hidden;
+        left: 545px;
+    }
+
+    img#pagecoin{
+        position: relative;
+        height: 64px;
+        width: 68px;
+        bottom:4.8px;
+    }
+
+    img#acervo{
+        position: relative;
+        height: 38px;
+        width: 80px;
+        bottom:10px;
+    }
+
+    img#sobre{
+        position: relative;
+        height: 64px;
+        width: 68px;
+        bottom:2.65px;
+    }
+
+/*Estilização do Carrossel*/
+.slider {
+    display: block;
+    width: 925px;
+    position: relative;
+    left: 200px;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    bottom: 10px;
+    margin-inline-start: 410px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+    border-radius: 3px;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
