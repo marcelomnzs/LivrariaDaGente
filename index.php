@@ -10,7 +10,7 @@
 <body>
     <header>
         <div id="navbar">
-            <img src="img/logo.png" alt="Logo Livraria da Gente" id="logo">
+            <a href="index.php"><img src="img/logo.png" alt="Logo Livraria da Gente" id="logo"></a>
             <a id="cadastrar" href="php/cadastro.php">Cadastrar</a>
             <h4 id="entrar"><a href="php/login.php">Entrar</a></h4>
         </div>
