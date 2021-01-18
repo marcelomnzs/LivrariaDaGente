@@ -10,18 +10,18 @@
   </head>
   <body>
     <img src="../img/Triângulo.png" alt="Detalhes de Triângulos Azuis" id="triangulos">
-    <img src="../img/logo-login.png" alt="Logo da Livraria da Gente" id="logo">
+    <a href="../index.php"><img src="../img/logo-login.png" alt="Logo da Livraria da Gente" id="logo"></a>
       <form action="validlogin.php" method="POST">
         <!-- A classe campo é relativo à os todos os campos de entrada -->
         <div class="campo">  
           <label for="email" id="email">E-mail:</label>
-          <input type="email" id="email" placeholder="example@email.com" name="email">
+          <input type="email" id="email" placeholder="example@email.com" name="emaillogin">
         </div>
         <div class="campo">
           <label for="pwd" id="senha">Senha:</label>
-          <input type="password" id="senha" placeholder="Digite sua Senha" name="senha">
+          <input type="password" id="senha" placeholder="Digite sua Senha" name="senhalogin">
         </div>
-        <button type="submit" class="btn">ENTRAR</button>
+        <a href="validlogin.php"><button type="submit" class="btn">ENTRAR</button></a>
       </form>
       <h5>Ainda não é cadastrado? Cadastre-se <a href="cadastro.php">aqui!</a></h5>
   </body>
