@@ -36,7 +36,7 @@
       <img class="d-block w-100" src="img/Carrossel2.png" alt="Feliz dia do Livro">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/Carrossel4.png" alt="Uma livraria feita por você, para você!">
+      <img class="d-block w-100" src="img/Carrossel3-(Atualizado).png" alt="Uma livraria feita por você, para você!">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

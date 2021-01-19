@@ -79,6 +79,7 @@ h4 a{
         position: relative;
         height: 38px;
         width: 80px;
+        top: 3px;
         
     }
 
@@ -92,12 +93,10 @@ h4 a{
 /*Estilização do carousel*/
 
 .carousel-item{
-    height: 490px;
-
+    height: 475px;
 } 
 
 .carousel-item img{
-    height: 490px;
-
+    height: 475px;
 }
 
