@@ -53,7 +53,5 @@
             <img src="img/acervo.png" alt="Acervo da Gente" id="acervo" class="botoes">
             <img src="img/sobre.png" alt="Sobre" id="sobre" class="botoes">
         </footer>
-
-    
 </body>
 </html>

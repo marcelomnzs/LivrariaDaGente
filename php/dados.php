@@ -36,7 +36,7 @@ if($_POST){
 			if($senha === $confirma){
 
 				echo  "<script>alert('Cadastro criado com Sucesso!');</script>";
-				$fp = fopen('cadastro.csv', 'a'); 
+				$fp = fopen('php/cadastro.csv', 'a'); 
 				fwrite($fp, $_POST['nomeUsuario'] . ";" . $_POST['email'] . ";". $_POST['senha'] . ";" . $_POST['confirma'] .";\n");
 				fclose($fp);
 				header("Refresh: 0; url = login.php");
