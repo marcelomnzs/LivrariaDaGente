@@ -649,10 +649,6 @@ img {
     border-radius: 1px;
 }
 
-.img-raised {
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-}
-
 .footer {
     padding: 24px 0;
 }
@@ -1162,11 +1158,8 @@ div.info-usuario{
     top: 25px;
 }
 
-.col-md-6{
-    border: 2px black solid;
+ .img-raised {
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    width: 443.5px;
+    height: 315.6px;
 }
- div#adicionarLivro{
-     background-color: red;
-     width: 353.5px;
-     height: 235.6px;
- }
