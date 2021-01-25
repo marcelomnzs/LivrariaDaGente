@@ -24,7 +24,7 @@ if($_POST){
 			if($login_email === $cadastrados[$i][1]){
 				if ($login_senha === $cadastrados[$i][2]){
 					echo "<script>alert('acesso liberado');</script>";
-					header("Refresh: 0; url = addlivro.php");
+					header("Refresh: 0; url = perfil.php");
 
 
 					$encontrado = 1;
