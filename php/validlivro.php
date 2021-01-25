@@ -9,24 +9,29 @@ $meulivro=file('livros.csv');
 for ($i=0; $i <sizeof($meulivro) ; $i++) { 
 	$meulivro[$i]=explode(',', $meulivro[$i]);
 } 
-	for($i = 0; $i < sizeof($meulivro); $i++){	
-		if ($nome_livro == $meulivro[$i][0]){
-			 echo  "<script>alert('Livro já cadastrado!');</script>";
-				header("Refresh: 0; url = livroscadastrados.php");
-					exit;
-		} 
-	}
+for($i = 0; $i < sizeof($meulivro); $i++){	
+	if ($nome_livro == $meulivro[$i][0]){
+		echo  "<script>alert('Livro já cadastrado!');</script>";
+		header("Refresh: 0; url = livroscadastrados.php");
+		exit;
+	} 
+}
 
 if ($nome_livro == "") {
-  echo "preencha o nome do livro";
+	echo  "<script>alert('Preencha o nome do livro');</script>";
+	header("Refresh: 0; url = addlivro.php");
 } else if ($autor == "" ) {
-   echo "preencha o nome autor";
+	echo  "<script>alert('Preencha o nome do autor do livro');</script>";
+	header("Refresh: 0; url = addlivro.php");
 } else if ($edicao == "") {
-   echo "preencha a edição";
+	echo  "<script>alert('Preencha a edição do livro');</script>";
+	header("Refresh: 0; url = addlivro.php");
 } else if ($genero == "genero") {
-  echo "preencha genero";
+	echo  "<script>alert('Preencha o gênero do livro');</script>";
+	header("Refresh: 0; url = addlivro.php");
 } else if ($estado == "estado") {
- echo "preencha estado";
+	echo  "<script>alert('Preencha o estado do livro');</script>";
+	header("Refresh: 0; url = addlivro.php");
 } 
 else {
 
@@ -34,13 +39,8 @@ else {
 	$fp= fopen('livros.csv', 'a');
 	fwrite( $fp ,$livro);
 	fclose($fp);
-  echo  "<script>alert('Livro adicionado com sucesso!');</script>";
-header("Refresh: 0; url = livroscadastrados.php");
-    
+	echo  "<script>alert('Livro adicionado com sucesso!');</script>";
+	header("Refresh: 0; url = livroscadastrados.php");
+
 } 
-
-
-
-
-
 ?> 
