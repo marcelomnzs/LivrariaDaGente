@@ -49,9 +49,9 @@
   </a>
 </div>
     <footer id="rodape">
-            <img src="img/pagecoin.png" alt="Pagecoins" id="pagecoin" class="botoes">
-            <img src="img/acervo.png" alt="Acervo da Gente" id="acervo" class="botoes">
-            <img src="img/sobre.png" alt="Sobre" id="sobre" class="botoes">
+           <a href="../php/pagecoin.php"> <img src="img/pagecoin.png" alt="Pagecoins" id="pagecoin" class="botoes"></a>
+            <a href="../php/acervo.php"><img src="img/acervo.png" alt="Acervo da Gente" id="acervo" class="botoes"></a>
+            <a href="../php/sobre.php"><img src="img/sobre.png" alt="Sobre" id="sobre" class="botoes"></a>
         </footer>
 </body>
 </html>
