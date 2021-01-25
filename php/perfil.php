@@ -47,7 +47,7 @@
       <div class="container">
         <div class="photo-container">
         <!-- Imagem do usuário -->
-          <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/ryan.jpg" alt="">
+          <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/ryan.jpg" alt="Foto do Usuário">
         </div>
         <!-- Info do usuário -->
         <h3 class="title">Usuário Teste</h3>
@@ -74,43 +74,16 @@
             <div class="tab-pane active" id="home" role="tabpanel">
               <div class="col-md-10 ml-auto mr-auto">
                 <div class="row collections">
-                  <div class="col-md-6">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg3.jpg" alt="" class="img-raised">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg3.jpg" alt="" class="img-raised">
-                  </div>
-                  <div class="col-md-6">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg8.jpg" alt="" class="img-raised">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg7.jpg" alt="" class="img-raised">
-                  </div>
+                    <div class="col-md-6">
+                      <a href="meuAcervo.php"><img src="../img/imagemMeuAcervo.png" alt="Clique aqui para entrar no Seu acervo" class="img-raised"></a>
+                      <a href="addlivro.php"><img src="../img/imagemAdicionarLivro.png" alt="Clique aqui para adicionar um Livro" class="img-raised"></a>
+                    </div>
+                    <div class="col-md-6">
+                    <a href="#"><img src="../img/imagemMeuPerfil.png" alt="Clique aqui para acessar o seu perfil" class="img-raised"></a>
+                    <a href="pagecoin.php"><img src="../img/imagemMeuSaldo.png" alt="Clique aqui para ver suas opções de saldo" class="img-raised"></a>
+                    </div>
                 </div>
               </div>
-            </div>
-            <div class="tab-pane" id="profile" role="tabpanel">
-              <div class="col-md-10 ml-auto mr-auto">
-                <div class="row collections">
-                  <div class="col-md-6">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg6.jpg" class="img-raised">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg11.jpg" alt="" class="img-raised">
-                  </div>
-                  <div class="col-md-6">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg7.jpg" alt="" class="img-raised">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg8.jpg" alt="" class="img-raised">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" id="messages" role="tabpanel">
-              <div class="col-md-10 ml-auto mr-auto">
-                <div class="row collections">
-                  <div class="col-md-6">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg3.jpg" alt="" class="img-raised">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg8.jpg" alt="" class="img-raised">
-                  </div>
-                  <div class="col-md-6">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg7.jpg" alt="" class="img-raised">
-                    <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/bg6.jpg" class="img-raised">
-                  </div>
-                </div>
               </div>
             </div>
           </div>

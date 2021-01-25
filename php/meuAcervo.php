@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-96x96.png">
 	<link rel="stylesheet" type="text/css" href="../css/acervo.css">
-	<title>Acervo</title>
+	<title>Meu Acervo</title>
 </head>
 	<body>
 	 	<header>
