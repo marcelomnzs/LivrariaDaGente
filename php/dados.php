@@ -39,7 +39,7 @@ if($_POST){
 				$fp = fopen('cadastro.csv', 'a'); 
 				fwrite($fp, $_POST['nomeUsuario'] . ";" . $_POST['email'] . ";". $_POST['senha'] . ";" . $_POST['confirma'] .";\n");
 				fclose($fp);
-				header("Refresh: 0; url = login.php");
+				header("Refresh: 0; url = perfil.php");
 
 			}
 			else{
