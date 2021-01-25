@@ -1162,3 +1162,11 @@ div.info-usuario{
     top: 25px;
 }
 
+.col-md-6{
+    border: 2px black solid;
+}
+ div#adicionarLivro{
+     background-color: red;
+     width: 353.5px;
+     height: 235.6px;
+ }
