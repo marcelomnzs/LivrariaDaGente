@@ -4,6 +4,8 @@ $autor= $_POST['autor'];
 $edicao= $_POST['edicao'];
 $genero= $_POST['genero'];
 $estado= $_POST['estado'];
+$subtitulo= $_POST['subtitulo'];
+$isbn= $_POST['isbn'];
 $meulivro=file('livros.csv');
 
 for ($i=0; $i <sizeof($meulivro) ; $i++) { 
@@ -35,7 +37,7 @@ if ($nome_livro == "") {
 } 
 else {
 
-	$livro= implode(',',[$nome_livro, $autor, $edicao, $genero, $estado])."\n";
+	$livro= implode(',',[$nome_livro, $autor, $subtitulo, $edicao, $isbn, $genero, $estado])."\n";
 	$fp= fopen('livros.csv', 'a');
 	fwrite( $fp ,$livro);
 	fclose($fp);

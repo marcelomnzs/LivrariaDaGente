@@ -5,7 +5,8 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-96x96.png">
 	<link rel="stylesheet" href="../css/addlivro.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
+
+
 </head>
 <body>
 	<!-- <img src="../img/fundoAddLivro.jpg" alt="Estante de Livros"> -->
@@ -20,6 +21,14 @@
       <input type="text" class="form-control" id="validationDefault02" name="autor" placeholder="Autor" required>
     </div>
     <div class="col-md-4 mb-3">
+      <label for="validationDefault02">SubTitulo</label>
+      <input type="text" class="form-control" id="validationDefault02" name="subtitulo" placeholder="SubTitulo" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault02">ISBN</label>
+      <input type="number" class="form-control" id="validationDefault02" name="isbn" placeholder="ISBN" required>
+    </div>
+    <div class="col-md-6 mb-3">
       <label for="validationDefaultUsername">Edição</label>
       <div class="input-group">
         <input type="number" class="form-control" min="1" max="999" name="edicao" placeholder="Edição do Livro" required>

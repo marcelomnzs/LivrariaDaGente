@@ -11,6 +11,17 @@ for ($i=0; $i < sizeof($livro); $i++) {
 <html>
 <head>
 	<title>Meu Acervo</title>
+
+	<style>
+	
+table, th, td {
+	
+	border: 1px solid black;
+}
+
+
+</style>
+	
 </head>
 <body>
 
@@ -21,7 +32,9 @@ for ($i=0; $i < sizeof($livro); $i++) {
 		<tr>
 			<th>Nome Do Livro</th>
 			<th>Autor</th>
+			<th>SubTitulo</th>
 			<th>Edição</th>
+			<th>ISBN</th>
 			<th>Gênero</th>
 			<th>Estado</th> 	
 		</tr>
@@ -32,6 +45,8 @@ for ($i=0; $i < sizeof($livro); $i++) {
 				<td><?= $liv[2] ?></td>
 				<td><?= $liv[3] ?></td>
 				<td><?= $liv[4] ?></td>
+				<td><?= $liv[5] ?></td>
+				<td><?= $liv[6] ?></td>
 				<td><a href="deletlivros.php?linha=<?= $linha ?>">Deletar Livro</a></td>
 			</tr>
 			
