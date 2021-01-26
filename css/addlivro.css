@@ -13,7 +13,7 @@ form{
 
 button.btn-primary{
     position:relative;
-    top: 25px;
+    top: 45px;
     width: 160px;
     height: 50px;
     left: 77.5%;
@@ -212,4 +212,16 @@ a{color:inherit;text-decoration:none}
 
 h5.card-title{
     text-align: center;
+}
+
+div.fotos{
+	position: relative;
+	right: 102%;
+	
+}
+
+input#foto{
+	position:relative;
+	top:30px;
+	display:inline-block;
 }

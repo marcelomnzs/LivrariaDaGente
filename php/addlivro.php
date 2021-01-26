@@ -62,8 +62,15 @@
 			<option value="Conservado">Usado</option>
 			<option value="Usado">Desgastado</option>
 		</select>
+		<div class="fotos">
+			<input type="file" accept="image/" id="foto">
+			<input type="file" accept="image/" id="foto">
+			<input type="file" accept="image/" id="foto">
+		</div>
     </div>
   </div>
+
+
   <button class="btn btn-primary" type="submit" value="Adicionar">Adicionar Livro</button>
 </form>
 
