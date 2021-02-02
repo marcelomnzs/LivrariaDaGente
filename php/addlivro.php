@@ -22,11 +22,11 @@
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationDefault02">SubTitulo</label>
-      <input type="text" class="form-control" id="validationDefault02" name="subtitulo" placeholder="SubTitulo" required>
+      <input type="text" class="form-control" id="validationDefault02" name="subtitulo" placeholder="SubTitulo" maxlength="100" required>
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationDefault02">ISBN</label>
-      <input type="number" class="form-control" id="validationDefault02" name="isbn" placeholder="ISBN" required>
+      <input type="text" class="form-control" id="validationDefault02" name="isbn" placeholder="ISBN ou ASIN" required>
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationDefaultUsername">Edição</label>
