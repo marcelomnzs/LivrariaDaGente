@@ -39,7 +39,7 @@ else {
 
 	$livro= implode(',',[$nome_livro, $autor, $subtitulo, $edicao, $isbn, $genero, $estado])."\n";
 	$fp= fopen('livros.csv', 'a');
-	fwrite( $fp ,$livro);
+	fwrite($fp, $livro);
 	fclose($fp);
 	echo  "<script>alert('Livro adicionado com sucesso!');</script>";
 	header("Refresh: 0; url = livroscadastrados.php");
