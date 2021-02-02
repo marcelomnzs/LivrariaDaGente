@@ -11,7 +11,7 @@
   <body>
     <img src="../img/Triângulo.png" alt="Detalhes de Triângulos Azuis" id="triangulos">
     <a href="../index.php"><img src="../img/logo-login.png" alt="Logo da Livraria da Gente" id="logo"></a> 
-      <form action="dados.php" method="POST">
+      <form action="../cad-usuario.php" method="POST">
         <!-- A classe campo é relativo à os todos os campos de entrada -->
         <div class="campo">  
           <label for="text" id="usuario">Nome de Usuário:</label>
