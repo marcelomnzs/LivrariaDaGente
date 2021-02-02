@@ -1,8 +1,7 @@
 <?php
-$cadastrados = file('cadastro.csv');
-for ($i = 0; $i < sizeof($cadastrados); $i++){
-	$cadastrados[$i] = explode(';',$cadastrados[$i]);
-}
+	include 'conect.php';
+
+
 if($_POST){
 	$nome = $_POST['nomeUsuario'];
 	$email = $_POST['email'];
@@ -26,20 +25,18 @@ if($_POST){
 			echo  "<script>alert('Campo confirmar senha não foi preenchido, refaça seu cadastro');</script>";
 			header("Refresh: 0; url = cadastro.php");
 		}else{
-			for($i = 0; $i < sizeof($cadastrados); $i++){	
-				if ($email === $cadastrados[$i][1]){
-					echo  "<script>alert('Email já cadastrado, faça seu login');</script>";
-					header("Refresh: 0; url = login.php");
-					exit;
-				}
-			}
+			/* FAZER VERIFICAÇÃO DO EMAIL*/
 			if($senha === $confirma){
 
-				echo  "<script>alert('Cadastro criado com Sucesso!');</script>";
-				$fp = fopen('cadastro.csv', 'a'); 
-				fwrite($fp, $_POST['nomeUsuario'] . ";" . $_POST['email'] . ";". $_POST['senha'] . ";" . $_POST['confirma'] .";\n");
-				fclose($fp);
-				header("Refresh: 0; url = perfil.php");
+				
+				$stmt = $con -> prepare("INSERT INTO usuario (nome,email,senha) VALUES (?,?,?);");
+				$stmt -> bindParam(1,$nome);
+				$stmt -> bindParam(2,$email);
+				$stmt -> bindParam(3,$senha);
+	
+
+				$stmt -> execute(); 
+				header("Refresh: 0; url = /php/perfil.php");
 
 			}
 			else{
@@ -47,6 +44,8 @@ if($_POST){
 				header("Refresh: 0; url = cadastro.php");	
 			}
 		}
+
 	}
+
 }
 ?>
