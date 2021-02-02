@@ -46,10 +46,10 @@ table, th, td {
 				<td><?= $liv[3] ?></td>
 				<td><?= $liv[4] ?></td>
 				<td><?= $liv[5] ?></td>
-				<td><?= $liv[6] ?></td>
-				<td><a href="deletlivros.php?linha=<?= $linha ?>">Deletar Livro</a></td>
-			</tr>
-			
+				<td><?= $liv[6] ?></td>				
+				<td><a href="editlivro.php?linha=<?= $linha ?>">Editar</a></td>
+				<td><a href="confirm.php?linha=<?= $linha ?>">Excluir</a></td>
+			</tr>			
 		<?php endforeach ?>
 	</table>
 
