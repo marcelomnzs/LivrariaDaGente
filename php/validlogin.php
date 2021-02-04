@@ -18,29 +18,27 @@ if($_POST){
 		header("Refresh: 0; url = /php/login.php");
 	}else{
 
-			$livraria = $con -> prepare("SELECT email FROM usuario WHERE email=? AND senha=?;"); 
-			$livraria -> bindParam(1,$login_email);
-			$livraria -> bindParam(2,$login_senha);
-			$livraria -> execute();
-			$f = $livraria -> fetch();
-			
-			if($f["email"] != null){
-				header("Refresh: 0; url = perfil.php");
+		$livraria = $con -> prepare("SELECT email FROM usuario WHERE email=? AND senha=?;"); 
+		$livraria -> bindParam(1,$login_email);
+		$livraria -> bindParam(2,$login_senha);
+		$livraria -> execute();
+		$f = $livraria -> fetch();
+		
+		if($f["email"] != null){
+			header("Refresh: 0; url = perfil.php");
 
-				$encontrado = 1;
-			}else{
-					echo "<script>alert('Email ou senha incorreto!');</script>";
+			$encontrado = 1;
+		}else{
+			echo "<script>alert('Email ou senha incorreto!');</script>";
 
-					header("Refresh: 0; url = login.php");
-					exit;
-
-				}
-			}
-		if($encontrado == 0){
-			echo "<script>alert('Email não cadastrado');</script>";
 			header("Refresh: 0; url = login.php");
+			exit;
+
 		}
 	}
-	
-
+	if($encontrado == 0){
+		echo "<script>alert('Email não cadastrado');</script>";
+		header("Refresh: 0; url = login.php");
+	}
+}
 ?>

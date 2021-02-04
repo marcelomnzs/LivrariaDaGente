@@ -27,13 +27,11 @@ if($_POST){
 		}else{
 			/* FAZER VERIFICAÇÃO DO EMAIL*/
 			if($senha === $confirma){
-
 				
 				$stmt = $con -> prepare("INSERT INTO usuario (nome,email,senha) VALUES (?,?,?);");
 				$stmt -> bindParam(1,$nome);
 				$stmt -> bindParam(2,$email);
 				$stmt -> bindParam(3,$senha);
-	
 
 				$stmt -> execute(); 
 				header("Refresh: 0; url = /php/perfil.php");

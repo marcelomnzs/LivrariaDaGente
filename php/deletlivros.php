@@ -1,12 +1,10 @@
-<?php
+<script>
+	var confirmar = confirm('Tem certeza que deseja excluir este livro do seu acervo?');
+	console.log(confirmar);
+	if(confirmar == true){
 
-$recebe_livro= file('livros.csv');
-$linha= $_GET['linha'];
-unset($recebe_livro[$linha]);
+	
+	}else {
 
-$novolivro= implode('', $recebe_livro);
-file_put_contents('livros.csv', $novolivro);
-
-  ?>
-
-  Deletado com sucesso, ver <a href="livroscadastrados.php">livros cadastrados</a>
+	}
+</script>
