@@ -1,10 +1,13 @@
 <!-- tentando validar o login -->
 
+<?php require_once 'init.php' ?>
+
 <?php
 include '../conect.php';
 
 if($_POST){
 	$encontrado = 0;
+	$usuario = $_POST['nomeUsuario'];
 	$login_email = $_POST['emaillogin'];
 	$login_senha = $_POST['senhalogin'];
 
@@ -18,13 +21,14 @@ if($_POST){
 		header("Refresh: 0; url = /php/login.php");
 	}else{
 
-		$livraria = $con -> prepare("SELECT email FROM usuario WHERE email=? AND senha=?;"); 
+		$livraria = $con -> prepare("SELECT email, nome FROM usuario WHERE email=? AND senha=?;"); 
 		$livraria -> bindParam(1,$login_email);
 		$livraria -> bindParam(2,$login_senha);
 		$livraria -> execute();
 		$f = $livraria -> fetch();
 		
 		if($f["email"] != null){
+			$_SESSION['usuario'] = $f["nome"]; 
 			header("Refresh: 0; url = perfil.php");
 
 			$encontrado = 1;

@@ -1,4 +1,7 @@
 <?php
+
+ require_once 'php/init.php'; 
+
 	include 'conect.php';
 
 
@@ -24,9 +27,22 @@ if($_POST){
 		else if($confirma === ""){
 			echo  "<script>alert('Campo confirmar senha não foi preenchido, refaça seu cadastro');</script>";
 			header("Refresh: 0; url = cadastro.php");
-		}else{
+		}  else
+
+		{
 			/* FAZER VERIFICAÇÃO DO EMAIL*/
 			if($senha === $confirma){
+
+				$stmt = $con -> prepare("SELECT  email FROM usuario  WHERE email=?");
+				$stmt -> bindParam(1,$email);
+				$stmt -> execute();
+				$f = $stmt -> fetch();
+
+				if ($f['email'] != NULL) {
+               echo "email já existe";
+            header("Refresh: 0; url = php/cadastro.php");
+				exit();
+				}
 				
 				$stmt = $con -> prepare("INSERT INTO usuario (nome,email,senha) VALUES (?,?,?);");
 				$stmt -> bindParam(1,$nome);
@@ -34,7 +50,7 @@ if($_POST){
 				$stmt -> bindParam(3,$senha);
 
 				$stmt -> execute(); 
-				header("Refresh: 0; url = /php/perfil.php");
+				header("Refresh: 0; url = php/login.php");
 
 			}
 			else{

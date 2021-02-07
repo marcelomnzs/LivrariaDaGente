@@ -1,3 +1,5 @@
+<?php require 'init.php'; ?>
+<?php if(isset($_SESSION['usuario'])): ?>
 <!DOCTYPE html>
 <html lang="en">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -33,7 +35,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="../assets/img/blurred-image-1.jpg">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="../index.php">Sair</a>
+            <a class="nav-link" href="logout.php">Sair</a>
           </li>
         </ul>
       </div>
@@ -50,7 +52,7 @@
           <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/ryan.jpg" alt="Foto do Usuário">
         </div>
         <!-- Info do usuário -->
-        <h3 class="title">Usuário Teste</h3>
+        <h3 class="title"><?= $_SESSION['usuario']?></h3>
         <div class="content">
           <div class="info-usuario">
             <h2>26</h2>
@@ -96,3 +98,4 @@
   <script src="../perfil.js"></script>
 </body>
 </html>
+<?php endif ?>
