@@ -25,7 +25,7 @@
 		echo '<a href="addlivro.php"><button type="submit" id="addLivroVazio">Adicionar Livro</button></a>';
 		exit();
 	}
-
+	
 	foreach ($livro as $linha => $liv) :
 		$nome_livro = $liv[0];
 		$autor_livro = $liv[1];

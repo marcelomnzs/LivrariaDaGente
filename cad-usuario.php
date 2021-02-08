@@ -27,9 +27,7 @@ if($_POST){
 		else if($confirma === ""){
 			echo  "<script>alert('Campo confirmar senha não foi preenchido, refaça seu cadastro');</script>";
 			header("Refresh: 0; url = cadastro.php");
-		}  else
-
-		{
+		}  else {
 			/* FAZER VERIFICAÇÃO DO EMAIL*/
 			if($senha === $confirma){
 
@@ -39,9 +37,9 @@ if($_POST){
 				$f = $stmt -> fetch();
 
 				if ($f['email'] != NULL) {
-               echo "email já existe";
-            header("Refresh: 0; url = php/cadastro.php");
-				exit();
+               		echo "email já existe";
+            		header("Refresh: 0; url = php/cadastro.php");
+					exit();
 				}
 				
 				$stmt = $con -> prepare("INSERT INTO usuario (nome,email,senha) VALUES (?,?,?);");
@@ -55,11 +53,10 @@ if($_POST){
 			}
 			else{
 				echo  "<script>alert('Senhas diferentes, refaça seu cadastro');</script>";
-				header("Refresh: 0; url = cadastro.php");	
+				header("Refresh: 0; url = php/cadastro.php");	
 			}
 		}
 
 	}
 
 }
-?>
