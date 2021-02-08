@@ -1,17 +1,18 @@
 <?php 
-include 'conect.php';
+include '../conect.php';
 
 $titulo= $_POST['nome'];
-$autor= $_POST['autor'];
-$edicao= $_POST['edicao'];
-$genero= $_POST['genero'];
-$estado= $_POST['estado'];
 $subtitulo= $_POST['subtitulo'];
+$autor= $_POST['autor'];
+$genero= $_POST['genero'];
+$edicao= $_POST['edicao'];
+$estado= $_POST['estado'];
 $isbn= $_POST['isbn'];
+$usuario_id = 2;
+$valor = 100.00;
 
-
-if ($nome_livro == "") {
-	echo  "<script>alert('Preencha o nome do livro'), 2000;</script>";
+if ($titulo == "") {
+	echo  "<script>alert('Preencha o nome do livro');</script>";
 	header("Refresh: 0; url = addlivro.php");
 } else if ($autor == "" ) {
 	echo  "<script>alert('Preencha o nome do autor do livro');</script>";
@@ -28,23 +29,20 @@ if ($nome_livro == "") {
 } 
 else {
 
-	$stmt = $con -> prepare("INSERT INTO livro (id, titulo, autor, genero, edicao, isbn, estado, valor, usuario_id, subtitulo, valor) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+	$stmt = $con -> prepare("INSERT INTO livro (titulo,subtitulo,autor,genero,edicao,estado,isbn,valor,usuario_id) VALUES(?,?,?,?,?,?,?,?,?);");
 
-	$stmt = bindParam(1, $id);
-	$stmt = bindParam(2, $titulo);
-	$stmt = bindParam(3, $autor);
-	$stmt = bindParam(4, $genero);
-	$stmt = bindParam(5, $edicao);
-	$stmt = bindParam(6, $isbn);
-	$stmt = bindParam(7, $estado);
-	$stmt = bindParam(8, $valor);
-	$stmt = bindParam(9, $usuario_id);
-	$stmt = bindParam(10, $subtitulo);
-	$stmt = bindParam(11, $valor);
+	$stmt -> bindParam(1,$titulo);
+	$stmt -> bindParam(2,$subtitulo);
+	$stmt -> bindParam(3,$autor);
+	$stmt -> bindParam(4,$genero);
+	$stmt -> bindParam(5,$edicao);
+	$stmt -> bindParam(6,$estado);
+	$stmt -> bindParam(7,$isbn);
+	$stmt -> bindParam(8,$valor);
+	$stmt -> bindParam(9,$usuario_id);
+	
+	$stmt -> execute();
 
-	$stmt = execute();
-
-	echo  "<script>alert('Livro adicionado com sucesso!');</script>";
 	header("Refresh: 0; url = livroscadastrados.php");
 
 } 

@@ -19,18 +19,11 @@
 	$autor_livro = '';
 	$subtitulo_livro = '';
 
-	$livro = file('livros.csv');
-	$quant_livro = sizeof($livro);
 
 	if ($livro == null) {
 		echo "<h5 id='nada'>Me parece que você ainda não tem livros, pressione o botão abaixo para adicionar livros a sua coleção</h5>";
 		echo '<a href="addlivro.php"><button type="submit" id="addLivroVazio">Adicionar Livro</button></a>';
 		exit();
-	}
-
-
-	for ($i = 0; $i < sizeof($livro); $i++) {
-		$livro[$i] = explode(',', $livro[$i]);
 	}
 
 	foreach ($livro as $linha => $liv) :
