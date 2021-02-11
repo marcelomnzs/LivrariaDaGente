@@ -1,10 +1,17 @@
-<script>
-	var confirmar = confirm('Tem certeza que deseja excluir este livro do seu acervo?');
-	console.log(confirmar);
-	if(confirmar == true){
+<?php
+	include 'init.php';
+	include './conect.php';
+	$id_livro =(int) $_GET['id'];
+	$user_id = $_SESSION['id'];
 
+	$stmt = $con ->prepare("SELECT * from livro WHERE id = ?;");
+	$stmt->execute([$id_livro]);
+	$resul = $stmt->fetch();
 	
-	}else {
 
+	if ($stmt->rowCount() > 0 && $resul['usuario_id'] == $user_id) {
+		$stmt = $con->prepare("DELETE FROM livro WHERE id = ?");
+		$stmt->execute([$id_livro]);
 	}
-</script>
+	header('location: livroscadastrados.php');
+?>
