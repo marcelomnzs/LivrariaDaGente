@@ -3,11 +3,10 @@
 <?php require_once 'init.php' ?>
 
 <?php
-include '../conect.php';
+include './conect.php';
 
 if ($_POST) {
 	$encontrado = 0;
-	$usuario = $_POST['nomeUsuario'];
 	$login_email = $_POST['emaillogin'];
 	$login_senha = $_POST['senhalogin'];
 
@@ -19,7 +18,7 @@ if ($_POST) {
 		header("Refresh: 0; url = /php/login.php");
 	} else {
 
-		$livraria = $con->prepare("SELECT email, nome FROM usuario WHERE email=? AND senha=?;");
+		$livraria = $con->prepare("SELECT email, nome, id FROM usuario WHERE email=? AND senha=?;");
 		$livraria->bindParam(1, $login_email);
 		$livraria->bindParam(2, $login_senha);
 		$livraria->execute();
@@ -27,8 +26,8 @@ if ($_POST) {
 
 		if ($f["email"] != null) {
 			$_SESSION['usuario'] = $f["nome"];
+			$_SESSION["id"] = $f["id"];
 			header("Refresh: 0; url = perfil.php");
-
 			$encontrado = 1;
 		} else {
 			echo "<script>alert('Email ou senha incorreto!');</script>";

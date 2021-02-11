@@ -1,5 +1,5 @@
 <?php 
-include '../conect.php';
+include './conect.php';
 
 $titulo= $_POST['nome'];
 $subtitulo= $_POST['subtitulo'];
@@ -8,7 +8,7 @@ $genero= $_POST['genero'];
 $edicao= $_POST['edicao'];
 $estado= $_POST['estado'];
 $isbn= $_POST['isbn'];
-$usuario_id = 2;
+$usuario_id = 1;
 $valor = 100.00;
 
 if ($titulo == "") {
