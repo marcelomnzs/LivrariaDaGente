@@ -14,61 +14,86 @@
 
 
 	<?php
+	include 'init.php';
+	include './conect.php';
 
-	$nome_livro = '';
-	$autor_livro = '';
-	$subtitulo_livro = '';
+	$usuario = $_SESSION['usuario'];
+	$id_sessao = (int) $_SESSION['id'];
 
+	//Read da Tabela de Livros
+	$stmt = $con->prepare("SELECT * from livro WHERE usuario_id = ? ;");
+	$stmt->execute([$id_sessao]);
+	$livros = $stmt->fetchAll();
 
-	if ($livro == null) {
+	// echo "<pre>";
+	// var_dump($livros);
+	// echo "</pre>";
+
+	// exit();
+	if (sizeof($livros) == 0) {
 		echo "<h5 id='nada'>Me parece que você ainda não tem livros, pressione o botão abaixo para adicionar livros a sua coleção</h5>";
-		echo '<a href="addlivro.php"><button type="submit" id="addLivroVazio">Adicionar Livro</button></a>';
+		echo '<a href="addlivro.php"><button type="submit" id="addLivro" class="mxauto">Adicionar Livro</button></a>';
 		exit();
 	}
-	
-	foreach ($livro as $linha => $liv) :
-		$nome_livro = $liv[0];
-		$autor_livro = $liv[1];
-		$subtitulo_livro = $liv[2]; ?>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="well well-sm">
-						<div class="row">
-							<div class="col-xs-3 col-md-3 text-center">
-								<img src="../img/JogosVorazesEmChamas.png" alt="Capa do livro Jogos Vorazes: Em chamas" class="img-rounded img-responsive" />
+	foreach ($livros as $livro) :
+		$nome_livro = $livro['titulo'];
+		$autor_livro = $livro['autor'];
+		$subtitulo_livro = $livro['subtitulo'];
+		$id_dono = $livro['usuario_id'];
+
+			echo "
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-6 '>
+					<div class='well well-sm'>
+						<div class='row'>
+							<div class='col-xs-3 col-md-3 text-center'>
+								<img src='../img/JogosVorazesEmChamas.png' alt='Capa do livro Jogos Vorazes: Em chamas' class='img-rounded img-responsive' />
 							</div>
-							<div class="col-xs-9 col-md-9 section-box">
+							<div class='col-xs-9 col-md-9 section-box'>
 								<h2>
-									<?= $nome_livro ?><a href="#detalhe" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+									$nome_livro  <a href='#detalhe' target='_blank'><span class='glyphicon glyphicon-new-window'></span></a>
 								</h2>
-								<h5 style="position:relative; top:5px;">
-									<strong>Autor(a):</strong><?= $autor_livro ?>
+								<h5 style='position:relative; top:5px;'>
+									<strong>Autor(a):</strong> $autor_livro 
 								</h5>
 								<p>
-									<i><?= $subtitulo_livro ?></i>
+									<i> $subtitulo_livro </i>
 								</p>
 								<hr />
-								<div class="row rating-desc">
-									<div class="col-md-12">
-										<span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart">
-										</span><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart">
-										</span><span class="glyphicon glyphicon-heart"></span>(36)<span class="separator">|</span>
-										<span class="glyphicon glyphicon-comment"></span>(100 Comments)
+								<div class='row rating-desc'>
+									<div class='col-md-12'>
+										<span class='glyphicon glyphicon-heart'></span><span class='glyphicon glyphicon-heart'>
+										</span><span class='glyphicon glyphicon-heart'></span><span class='glyphicon glyphicon-heart'>
+										</span><span class='glyphicon glyphicon-heart'></span>(36)<span class='separator'>|</span>
+										<span class='glyphicon glyphicon-comment'></span>(100 Comments)
 									</div>
-									<div class="col-md-12 mt-20 excluir">
-										<a href="deletlivros.php?linha=<?= $linha ?>" class="btn btn-danger btn-xs">Excluir Livro</a>
+									<div class='col-md-12 mt-20'>
+										<a href='deletlivros.php?id=" . $livro['id']  . "' class='btn btn-danger btn-xs excluir'>Excluir Livro</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			<?php endforeach ?>
+			</div>
+		";
+	endforeach;
 
-			<a href="addlivro.php"><button type="submit" id="addLivro">Adicionar Livro</button></a>
+	?>
+	<a href="addlivro.php"><button type="submit" id="addLivro" class="mx-auto">Adicionar Livro</button></a>
 
+	<script>
+		var links = document.querySelectorAll('.excluir');
+		for (link of links) { //foreach
+			link.addEventListener('click', function(e) {
+				if (!confirm('Apagar Livro?')) {
+					e.preventDefault();
+				}
+			});
+		}
+	</script>
 </body>
 
 </html>

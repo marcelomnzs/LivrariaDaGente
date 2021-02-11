@@ -42,6 +42,9 @@ body {
 .container{
     position: relative; 
     top: 30px;
+    margin: 0 ;
+    margin-left: 0 !important;
+    padding: 0 !important;
 }
 
 h1 ,h5#nada{
@@ -50,35 +53,21 @@ h1 ,h5#nada{
 
 button#addLivro{
     position: relative;
-    right: 9%;
-    top: 175px;
     background-color: #27436F;
     width: 210px;
     height: 30px;
     border:none;
     color: white;
-    margin-top: 25px;
+    left: 42.32%;
+    margin-top:10px;
     margin-bottom: 20px;
-}
-
-button#addLivroVazio{
-    position: relative;
-    left: 42.4%;
-    top: 175px;
-    background-color: #27436F;
-    width: 210px;
-    height: 30px;
-    border:none;
-    color: white;
-    margin-top: 25px;
-    margin-bottom: 20px;
-}
-
-.col-md-6{
-    position: relative;
-    left: 24%;
 }
 
 .excluir{
     margin-top: 5px;
+}
+
+.col-md-6{
+    position: relative;
+    left: 32.5%;
 }
