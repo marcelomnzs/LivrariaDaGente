@@ -1,64 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-96x96.png">
-     <!-- Link para importar a estilização do bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Livraria da Gente</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-96x96.png">
+  <!-- Link para importar a estilização do bootstrap -->
+  <?php
+    include "php/linksbootstrap.php";
+  ?>
+  <title>Livraria da Gente</title>
 </head>
+
 <body>
-<?php
+  <?php
   include "conect.php";
 
-  $smt = $con ->prepare ("SELECT id,nome,email,senha,saldo FROM usuario");
-  $smt ->execute();
-  $aln = $smt -> fetch();
-?>
-     <!-- Importação do JS para animação do bototstrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  $smt = $con->prepare("SELECT id,nome,email,senha,saldo FROM usuario");
+  $smt->execute();
+  $aln = $smt->fetch();
+  ?>
 
-    <header>
-        <div id="navbar">
-            <a href="index.php"><img src="img/logo.png" alt="Logo Livraria da Gente" id="logo"></a>
-            <a id="cadastrar" href="php/cadastro.php">Cadastrar</a>
-            <h4 id="entrar"><a href="php/login.php">Entrar</a></h4>
-        </div>
-    </header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <header>
+    <nav class="navbar">
+      <a href="index.php"><img src="img/logo.png" alt="Logo Livraria da Gente" id="logo"></a>
+      <div class="navbar-right pr-4">
+        <a href="php/cadastro.php" id="cadastrar">Cadastrar</a>
+        <a class="btn btn-outline-info" href="php/login.php" role="button" href="php/login.php">Entrar</a>
+      </div>
+    </nav>
+  </header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner" >
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="img/Carrossel1.png" alt="A livraria da Gente tem o objetivo de difundir a leitura para todos!">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="img/Carrossel1-Teste.png" alt="A livraria da Gente tem o objetivo de difundir a leitura para todos!">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/Carrossel1-Teste.png" alt="Feliz dia do Livro">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/Carrossel1-Teste.png" alt="Uma livraria feita por você, para você!">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="img/Carrossel2.png" alt="Feliz dia do Livro">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="img/Carrossel3-(Atualizado).png" alt="Uma livraria feita por você, para você!">
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-    <footer id="rodape">
-           <a href="../php/pagecoin.php"> <img src="img/pagecoin.png" alt="Pagecoins" id="pagecoin" class="botoes"></a>
-            <a href="../php/acervo.php"><img src="img/acervo.png" alt="Acervo da Gente" id="acervo" class="botoes"></a>
-            <a href="../php/sobre.php"><img src="img/sobre.png" alt="Sobre" id="sobre" class="botoes"></a>
-        </footer>
+
+  <!-- Footer -->
+  <footer class="bg-white">
+     <div class="container py-5">
+         <div class="row py-3">
+             <div class="col-md-4 pl-5">
+                 <h6 class="text-uppercase font-weight-bold mb-4">Sobre</h6>
+                 <ul class="list-unstyled mb-0">
+                     <li class="mb-2"><a href="#" class="text-muted">Fale Conosco</a></li>
+                     <li class="mb-2"><a href="#" class="text-muted">Sobre Nós</a></li>
+                 </ul>
+             </div>
+             <div class="col-md-4">
+                 <h6 class="text-uppercase font-weight-bold mb-4">Ajuda</h6>
+                 <ul class="list-unstyled mb-0">
+                     <li class="mb-2"><a href="#" class="text-muted">Como funciona o pagamento?</a></li>
+                     <li class="mb-2"><a href="#" class="text-muted">Envio</a></li>
+                     <li class="mb-2"><a href="#" class="text-muted">Cancelamento</a></li>
+                     <li class="mb-2"><a href="#" class="text-muted">Retorno</a></li>
+                 </ul>
+             </div>
+        
+             <div class="col-md-4">
+                 <h6 class="text-uppercase font-weight-bold mb-4">Endeço Físico e telefone</h6>
+                 <p class="text-muted mb-4">Rua Fitícia - Virando a esquina, 380. (81)3548-1234</p>
+                 <ul class="list-inline mt-4">
+                     <li class="list-inline-item "><a href="#" target="_blank" title="twitter"><img class="imagensRodape" src="img/twitter.png" alt=""></a></li>
+                     <li class="list-inline-item "><a href="#" target="_blank" title="facebook"><img class="imagensRodape" src="img/facebook-novo.png" alt=""></a></li>
+                     <li class="list-inline-item "><a href="https://www.instagram.com/livrariadagente9/" target="_blank" title="instagram"><img class="imagensRodape" src="img/instagram-novo.png" alt=""></a></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+     <hr class="p-0 m-0 b-0">
+     <div class="bg-light py-2">
+         <div class="container text-center">
+             <p class="text-muted mb-0 py-2">© 2021 Livraria da gente&trade; Todos os direitos reservados.</p>
+         </div>
+     </div>
+ </footer>
+
+
 </body>
+
 </html>

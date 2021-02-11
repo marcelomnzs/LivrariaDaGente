@@ -13,90 +13,54 @@ body{
 }
 
 /*Estilização do Navbar*/
-div#navbar{
-    height: 80px;
+a#cadastrar{
     position: relative;
+    top: 2px;
+    right: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 img#logo{
     position: relative;
-    height: 70px;
-    width: 40px;
-    top:3px;
+    height: 60px;
+    width: 35px;
     left: 35px;
 }
 
-a#cadastrar{
-    background-color: #27436F;
-    position: relative;
-    border: none;
-    width:100px;
-    padding: 8px;
-    padding-bottom:6px;
-    color:white;
-    font-size: 10pt;
-    left: 84.89%;
-    font-family: 'Lato',sans-serif;
-    font-size: 12.5pt;
-    text-decoration: none;
-    top:5px;
+a.btn-outline-info{
+    /* background-color: #27436F; */
+    color: #27436F !important;
+    background-color: transparent;
+    background-image: none;
+    border-color: #27436F !important;
 }
 
-h4#entrar{
-    position: relative;
-    left: 82.5%;
-    bottom: 45.5px;
-    width: 6px;
-    font-size:13.2pt;
-}
-
-h4 a{
-    text-decoration: none;
-    color:black;
+a.btn-outline-info:hover{
+    background-color: #27436F !important;
+    color: #ffffff !important;
 }
 
 /*Estilização do rodapé*/
-    footer#rodape{
-        position: relative;
-        height: 65.5px;
-        overflow:hidden;
-    }
 
-    .botoes{
-        overflow: hidden;
-        left: 545px;
-    }
+.imagensRodape{
+    width: 60%;
+    height: 60%;
+}
 
-    img#pagecoin{
-        position: relative;
-        height: 64px;
-        width: 68px;
-        bottom:4.8px;
-    }
+.list-inline-item:hover{
+    filter: invert(30%);
+}
 
-    img#acervo{
-        position: relative;
-        height: 38px;
-        width: 80px;
-        top: 3px;
-        
-    }
-
-    img#sobre{
-        position: relative;
-        height: 64px;
-        width: 68px;
-        bottom:2.65px;
-    }
 
 /*Estilização do carousel*/
 
 .carousel-item{
-    height: 475px;
+    height: 100%;
 } 
 
 .carousel-item img{
-    height: 475px;
+    height: 549px;
 }
 
 /* Estilização dos indicadores do carrossel */
