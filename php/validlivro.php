@@ -1,15 +1,15 @@
 <?php 
-include './conect.php';
+include '../conect.php';
 
-$titulo= $_POST['nome'];
-$subtitulo= $_POST['subtitulo'];
+$titulo= $_POST['titulo'];
 $autor= $_POST['autor'];
 $genero= $_POST['genero'];
+$subtitulo= $_POST['subtitulo'];
 $edicao= $_POST['edicao'];
-$estado= $_POST['estado'];
 $isbn= $_POST['isbn'];
-$usuario_id = 1;
+$estado= $_POST['estado'];
 $valor = 100.00;
+$usuario_id = 1;
 
 if ($titulo == "") {
 	echo  "<script>alert('Preencha o nome do livro');</script>";
@@ -29,15 +29,15 @@ if ($titulo == "") {
 } 
 else {
 
-	$stmt = $con -> prepare("INSERT INTO livro (titulo,subtitulo,autor,genero,edicao,estado,isbn,valor,usuario_id) VALUES(?,?,?,?,?,?,?,?,?);");
+	$stmt = $con -> prepare("INSERT INTO livro (titulo,autor,genero,subtitulo,edicao,isbn,estado,valor,usuario_id) VALUES(?,?,?,?,?,?,?,?,?);");
 
 	$stmt -> bindParam(1,$titulo);
-	$stmt -> bindParam(2,$subtitulo);
-	$stmt -> bindParam(3,$autor);
-	$stmt -> bindParam(4,$genero);
+	$stmt -> bindParam(2,$autor);
+	$stmt -> bindParam(3,$genero);
+	$stmt -> bindParam(4,$subtitulo);
 	$stmt -> bindParam(5,$edicao);
-	$stmt -> bindParam(6,$estado);
-	$stmt -> bindParam(7,$isbn);
+	$stmt -> bindParam(6,$isbn);
+	$stmt -> bindParam(7,$estado);
 	$stmt -> bindParam(8,$valor);
 	$stmt -> bindParam(9,$usuario_id);
 	

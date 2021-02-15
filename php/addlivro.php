@@ -14,7 +14,7 @@
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationDefault01">Nome</label>
-      <input type="text" class="form-control" id="validationDefault01" name="nome" placeholder="Título do Livro" required>
+      <input type="text" class="form-control" id="validationDefault01" name="titulo" placeholder="Título do Livro" required>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationDefault02">Autor</label>

@@ -48,7 +48,7 @@ if($_POST){
 				$stmt -> bindParam(3,$senha);
 
 				$stmt -> execute(); 
-				header("Refresh: 0; url = php/login.php");
+				header("location: php/login.php");
 
 			}
 			else{

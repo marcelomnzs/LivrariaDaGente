@@ -3,7 +3,7 @@
 <?php require_once 'init.php' ?>
 
 <?php
-include './conect.php';
+include '../conect.php';
 
 if ($_POST) {
 	$encontrado = 0;
@@ -18,7 +18,7 @@ if ($_POST) {
 		header("Refresh: 0; url = /php/login.php");
 	} else {
 
-		$livraria = $con->prepare("SELECT email, nome, id FROM usuario WHERE email=? AND senha=?;");
+		$livraria = $con->prepare("SELECT email, nome, id FROM usuario WHERE email=? AND senha=?");
 		$livraria->bindParam(1, $login_email);
 		$livraria->bindParam(2, $login_senha);
 		$livraria->execute();
