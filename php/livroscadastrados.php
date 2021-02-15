@@ -71,6 +71,8 @@
 									</div>
 									<div class='col-md-12 mt-20'>
 										<a href='deletlivros.php?id=" . $livro['id']  . "' class='btn btn-danger btn-xs excluir'>Excluir Livro</a>
+										<a href='updateform.php?id=" . $livro['id']  . "'>Editar Livro</a>
+
 									</div>
 								</div>
 							</div>
