@@ -1,4 +1,5 @@
 <?php 
+require 'init.php';
 include '../conect.php';
 
 $titulo= $_POST['titulo'];
@@ -9,7 +10,7 @@ $edicao= $_POST['edicao'];
 $isbn= $_POST['isbn'];
 $estado= $_POST['estado'];
 $valor = 100.00;
-$usuario_id = 1;
+$usuario_id = $_SESSION['id'];
 
 if ($titulo == "") {
 	echo  "<script>alert('Preencha o nome do livro');</script>";
