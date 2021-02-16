@@ -58,12 +58,29 @@ button#addLivro{
     height: 30px;
     border:none;
     color: white;
-    left: 42.32%;
+    left: 49%;
+    margin-top:10px;
+    margin-bottom: 20px;
+    bottom: 503px;
+}
+
+button#zeroLivro{
+    position: relative;
+    background-color: #27436F;
+    width: 210px;
+    height: 30px;
+    border:none;
+    color: white;
+    left: 42%;
     margin-top:10px;
     margin-bottom: 20px;
 }
 
 .excluir{
+    margin-top: 5px;
+}
+
+.alterar{
     margin-top: 5px;
 }
 

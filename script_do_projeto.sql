@@ -16,7 +16,7 @@ CREATE TABLE livro(
     id INTEGER NOT NULL AUTO_INCREMENT,
     titulo VARCHAR(50) NOT NULL,
     autor VARCHAR(40) NOT NULL,
-    genero VARCHAR(20) NOT NULL,
+    genero VARCHAR(50) NOT NULL,
     subtitulo VARCHAR(100) NOT NULL,
     edicao INTEGER NOT NULL,
     isbn VARCHAR(13) NOT NULL,

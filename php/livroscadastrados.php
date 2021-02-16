@@ -15,7 +15,7 @@
 
 	<?php
 	include 'init.php';
-	include '../conect.php';
+	include './conect.php';
 
 	$usuario = $_SESSION['usuario'];
 	$id_sessao = (int) $_SESSION['id'];
@@ -25,14 +25,9 @@
 	$stmt->execute([$id_sessao]);
 	$livros = $stmt->fetchAll();
 
-	// echo "<pre>";
-	// var_dump($livros);
-	// echo "</pre>";
-
-	// exit();
 	if (sizeof($livros) == 0) {
 		echo "<h5 id='nada'>Me parece que você ainda não tem livros, pressione o botão abaixo para adicionar livros a sua coleção</h5>";
-		echo '<a href="addlivro.php"><button type="submit" id="addLivro" class="mxauto">Adicionar Livro</button></a>';
+		echo '<a href="addlivro.php"><button type="submit" id="zeroLivro" class="mxauto">Adicionar Livro</button></a>';
 		exit();
 	}
 
@@ -71,7 +66,7 @@
 									</div>
 									<div class='col-md-12 mt-20'>
 										<a href='deletlivros.php?id=" . $livro['id']  . "' class='btn btn-danger btn-xs excluir'>Excluir Livro</a>
-										<a href='updateform.php?id=" . $livro['id']  . "'>Editar Livro</a>
+										<a href='updateform.php?id=" . $livro['id']  . "' class='btn btn-warning btn-xs alterar'>Editar Livro</a>
 
 									</div>
 								</div>
