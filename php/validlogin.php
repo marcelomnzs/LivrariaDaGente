@@ -3,7 +3,7 @@
 <?php require_once 'init.php' ?>
 
 <?php
-include './conect.php';
+include '../conect.php';
 
 if ($_POST) {
 	$encontrado = 0;
