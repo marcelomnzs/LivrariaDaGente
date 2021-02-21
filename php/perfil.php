@@ -108,6 +108,12 @@
                     <h4>Meu saldo</h4>
                     <p>Clique aqui para ver opções de saldo, como histórico de compras e outros </p>
                   </div>
+                    <div class="single-service">
+                    <a href="pesquisaForm.php"><span class="func"></span></a>
+                    <i class="fas fa-search"></i>
+                    <h4>Pesquise Livros</h4>
+                    <p>Pesquise Livros</p>
+                  </div>
                 </div>
               </div>
             </div>
