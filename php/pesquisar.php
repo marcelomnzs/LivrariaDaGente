@@ -57,7 +57,7 @@ echo"<div class='container'>
 										<span class='glyphicon glyphicon-comment'></span>(100 Comments)
 									</div>
 									<div class='col-md-12 mt-20'>
-										<a href='listaDesejos.php?id=" . $livro['id']  . "' class='btn btn-danger btn-xs excluir'>Lista de Desejos</a>
+										<a href='addlistDesejo.php?id=" . $livros['id']  . "' class='btn btn-danger btn-xs excluir'>Lista de Desejos</a>
 									
 									</div>
 								</div>
