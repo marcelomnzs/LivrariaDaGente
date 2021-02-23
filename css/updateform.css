@@ -7,9 +7,8 @@ form{
 button.btn-primary{
     position:relative;
     top: 45px;
-    width: 160px;
-    height: 50px;
-    left: 77.5%;
+    width: 100px;
+    left: 83%;
     background-color: #007bff;
 }
 
@@ -103,7 +102,7 @@ a{color:inherit;text-decoration:none}
 	display:block;
 }
 .login-form .group .input,
-.login-form .group .button{
+.login-form .group{
 	border:none;
 	padding:15px 20px;
 	border-radius:25px;

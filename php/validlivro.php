@@ -2,7 +2,7 @@
 require 'init.php';
 include '../conect.php';
 
-$titulo= $_POST['titulo'];
+$nome= $_POST['nome'];
 $autor= $_POST['autor'];
 $genero= $_POST['genero'];
 $subtitulo= $_POST['subtitulo'];
@@ -12,7 +12,7 @@ $estado= $_POST['estado'];
 $valor = 100.00;
 $usuario_id = $_SESSION['id'];
 
-if ($titulo == "") {
+if ($nome == "") {
 	echo  "<script>alert('Preencha o nome do livro');</script>";
 	header("Refresh: 0; url = addlivro.php");
 } else if ($autor == "" ) {
@@ -32,7 +32,7 @@ else {
 
 	$stmt = $con -> prepare("INSERT INTO livro (titulo,autor,genero,subtitulo,edicao,isbn,estado,valor,usuario_id) VALUES(?,?,?,?,?,?,?,?,?);");
 
-	$stmt -> bindParam(1,$titulo);
+	$stmt -> bindParam(1,$nome);
 	$stmt -> bindParam(2,$autor);
 	$stmt -> bindParam(3,$genero);
 	$stmt -> bindParam(4,$subtitulo);

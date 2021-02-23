@@ -10,8 +10,7 @@
 </head>
 
 <body>
-	<h1>Meu acervo</h1>
-
+	
 
 	<?php
 	include 'init.php';
@@ -25,22 +24,29 @@
 	$stmt->execute([$id_sessao]);
 	$livros = $stmt->fetchAll();
 
+	//Condição que verifica se o usuário possui livros, caso não ele recebe uma mensagem
 	if (sizeof($livros) == 0) {
+		echo"<h1>Meu acervo</h1>";
 		echo "<h5 id='nada'>Me parece que você ainda não tem livros, pressione o botão abaixo para adicionar livros a sua coleção</h5>";
 		echo '<a href="addlivro.php"><button type="submit" id="zeroLivro" class="mxauto">Adicionar Livro</button></a>';
 		exit();
 	}
+	
+	echo"<h1 id='margin'>Meu acervo</h1>";
+	echo'<a href="addlivro.php" id="add"><button type="submit" id="addLivro">Adicionar Livro</button></a>';
 
 	foreach ($livros as $livro) :
 		$nome_livro = $livro['titulo'];
 		$autor_livro = $livro['autor'];
 		$subtitulo_livro = $livro['subtitulo'];
 		$id_dono = $livro['usuario_id'];
+		$campos =  "nome=" . $nome_livro . "&autor=" . $autor_livro . "&sub=" . $subtitulo_livro . "&genero=" . $livro['genero'] . "&edicao=" . $livro['edicao'] . "&isbn=" . $livro['isbn'] . "&estado=" . $livro['estado'];
 
+		//Div impressa para cada livro
 			echo "
 		<div class='container'>
 			<div class='row'>
-				<div class='col-md-6 '>
+				<div class='col-md-6 centered'>
 					<div class='well well-sm'>
 						<div class='row'>
 							<div class='col-xs-3 col-md-3 text-center'>
@@ -66,8 +72,7 @@
 									</div>
 									<div class='col-md-12 mt-20'>
 										<a href='deletlivros.php?id=" . $livro['id']  . "' class='btn btn-danger btn-xs excluir'>Excluir Livro</a>
-										<a href='updateform.php?id=" . $livro['id']  . "' class='btn btn-warning btn-xs alterar'>Editar Livro</a>
-
+										<a href='updateform.php?id=" . $livro['id']  . "&". $campos . " ' class='btn btn-warning btn-xs alterar'>Editar Livro</a>
 									</div>
 								</div>
 							</div>
@@ -79,13 +84,16 @@
 	endforeach;
 
 	?>
-	<a href="addlivro.php"><button type="submit" id="addLivro" class="mx-auto">Adicionar Livro</button></a>
 
 	<script>
+	//Confirmação de exclusão
+		//Seleciona todas as classes '.excluir'
 		var links = document.querySelectorAll('.excluir');
 		for (link of links) { //foreach
 			link.addEventListener('click', function(e) {
+				//Se a confirmação for 'falsa' (click = cancelar)
 				if (!confirm('Apagar Livro?')) {
+					//Cancela a exclusão
 					e.preventDefault();
 				}
 			});

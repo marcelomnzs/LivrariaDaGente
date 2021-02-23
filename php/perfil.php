@@ -73,8 +73,8 @@
           <section>
             <div class="container">
               <div class="row">
-              <!-- Card 1 -->
-                <div class="col-md-3">
+                <!-- Card 1 -->
+                <div class="col">
                   <div class="single-service">
                     <a href="#"><span class="func"></span></a>
                     <i class="fas fa-user"></i>
@@ -83,36 +83,39 @@
                   </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="col-md-3">
+                <div class="col">
                   <div class="single-service">
-                  <a href="livroscadastrados.php"><span class="func"></span></a>
-                  <i class="fas fa-book-reader"></i>
+                    <a href="livroscadastrados.php"><span class="func"></span></a>
+                    <i class="fas fa-book-reader"></i>
                     <h4>Meu acervo</h4>
                     <p>Clique aqui para ver e gerenciar as opções do seu acervo</p>
                   </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="col-md-3">
+                <div class="col">
                   <div class="single-service">
-                  <a href="addlivro.php"><span class="func"></span></a>
+                    <a href="addlivro.php"><span class="func"></span></a>
                     <i class="fas fa-book"></i>
                     <h4>Adicionar Livro</h4>
                     <p>Clique aqui para adicionar um livro ao seu acervo pessoal</p>
                   </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="col-md-3">
+                <div class="col">
                   <div class="single-service">
-                  <a href="pagecoin.php"><span class="func"></span></a>
-                  <i class="fas fa-chart-bar"></i>
+                    <a href="pagecoin.php"><span class="func"></span></a>
+                    <i class="fas fa-chart-bar"></i>
                     <h4>Meu saldo</h4>
-                    <p>Clique aqui para ver opções de saldo, como histórico de compras e outros </p>
+                    <p>Clique aqui para ver as opções de saldo da sua conta</p>
                   </div>
-                    <div class="single-service">
+                </div>
+              <!-- Card 5 -->
+                <div class="col">
+                  <div class="single-service">
                     <a href="pesquisaForm.php"><span class="func"></span></a>
                     <i class="fas fa-search"></i>
                     <h4>Pesquise Livros</h4>
-                    <p>Pesquise Livros</p>
+                    <p>Clique aqui para buscar um livro pelo seu nome ou autor</p>
                   </div>
                 </div>
               </div>
@@ -167,7 +170,7 @@
       </footer>
 
       <script src="../perfil.js"></script>
-      
+
     </body>
 
   </html>

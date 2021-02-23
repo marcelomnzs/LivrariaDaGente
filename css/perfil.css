@@ -1236,7 +1236,7 @@ a.btn-outline-info:hover{
 	height: 60px;
 	border: 1px solid #ddd;
 	line-height: 60px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	border-radius: 50%;
 	-webkit-transition: .3s;
 	transition: .3s
