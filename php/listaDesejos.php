@@ -79,7 +79,7 @@
 	endforeach;
 
 	?>
-	<a href="addlivro.php"><button type="submit" id="addLivro" class="mx-auto">Adicionar Livro</button></a>
+	<a href="addlivro.php"><button type="submit" id="addLivro" class="mx-auto">Adicionar a lista de desejos</button></a>
 
 	<script>
 		var links = document.querySelectorAll('.excluir');

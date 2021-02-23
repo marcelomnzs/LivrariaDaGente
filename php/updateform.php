@@ -25,7 +25,7 @@ $estado =$_GET['estado'];
     <?= include "linksbootstrap.php"?>
 </head>
 <body>
-    <form action="editarlivro.php" class="login-wrap" method="POST">
+    <form action="editarlivro.php?id=<?=$id_livro?>" class="login-wrap" method="POST">
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label>Nome do Livro:</label>

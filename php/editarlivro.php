@@ -17,7 +17,7 @@ $estado= $_POST['estado'];
 $valor=100;
 
 
-$livro_id=$_POST['id'];
+$livro_id=$_GET['id'];
 $usuario_id=$_SESSION['id'];
 
 
@@ -34,6 +34,7 @@ if($stmt->rowCount() > 0 && $stmt->fetch()['usuario_id'] == $usuario_id) {
        ");
    $stmt->execute([$titulo,$autor,$genero,$subtitulo,$edicao,$isbn,$estado,$valor,$usuario_id,$livro_id]);
    }
+
 
 
 header('location:livroscadastrados.php');
