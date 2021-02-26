@@ -76,7 +76,7 @@
                 <!-- Card 1 -->
                 <div class="col">
                   <div class="single-service">
-                    <a href="#"><span class="func"></span></a>
+                    <a href="../perfilConfig.php"><span class="func"></span></a>
                     <i class="fas fa-user"></i>
                     <h4>Meu Perfil</h4>
                     <p>Clique aqui para ver e gerenciar as opções do seu perfil</p>
