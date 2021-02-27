@@ -1,7 +1,14 @@
 
-<head>	
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<head>
+	
 	<link rel="stylesheet" href="../css/livroscadastrados.css">
 </head>
+
+
 
 <?php 
  
@@ -10,7 +17,6 @@
 $pesquisa= $_POST['pesquisar'];
 
 include '../conect.php';
-include 'linksbootstrap.php';
 
 
 $stmt = $con->prepare("SELECT * FROM livro WHERE titulo LIKE :pesquisa OR autor LIKE :pesquisa OR genero LIKE :pesquisa OR subtitulo LIKE :pesquisa  OR edicao LIKE :pesquisa OR isbn LIKE :pesquisa OR estado LIKE :pesquisa OR valor LIKE :pesquisa");
@@ -24,11 +30,9 @@ while ($livros = $stmt->fetch()){
 		$autor_livro = $livros['autor'];
 		$subtitulo_livro = $livros['subtitulo'];
 		
-		echo"<h1>Resultados da Pesquisa</h1>";
-		
-		echo"<div class='container'>
+echo"<div class='container'>
 			<div class='row'>
-				<div class='col-md-6 centered'>
+				<div class='col-md-6 '>
 					<div class='well well-sm'>
 						<div class='row'>
 							<div class='col-xs-3 col-md-3 text-center'>
@@ -54,6 +58,7 @@ while ($livros = $stmt->fetch()){
 									</div>
 									<div class='col-md-12 mt-20'>
 										<a href='addlistDesejo.php?id=" . $livros['id']  . "' class='btn btn-danger btn-xs excluir'>Lista de Desejos</a>
+									
 									</div>
 								</div>
 							</div>
@@ -61,7 +66,13 @@ while ($livros = $stmt->fetch()){
 					</div>
 				</div>
 			</div>";
-}
+
+
+
+
+
+} 
+
 
 ?>
 
