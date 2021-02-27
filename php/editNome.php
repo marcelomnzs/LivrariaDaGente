@@ -1,7 +1,7 @@
 <?php 
 require 'init.php';
 
-$atual = $_POST['atual'];
+$atual = $_POST['nome'];
 $novo = $_POST['novo'];
 
 

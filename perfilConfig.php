@@ -2,14 +2,15 @@
 <?php  require 'php/init.php'; ?>
 <?php if(isset($_SESSION['usuario'])): ?>
 
+
 <?php 
 include 'conect.php';
 
 $usuario = $_SESSION['usuario'];
-$id_sessao = (int) $_SESSION['id'];
+$id = (int) $_SESSION['id'];
 
 $stmt = $con->prepare("SELECT * FROM usuario WHERE id = ?");
-$stmt->execute([$id_sessao]);
+$stmt->execute([$id]);
 $users = $stmt->fetchAll();
 
 
@@ -30,35 +31,36 @@ $users = $stmt->fetchAll();
  <body>
  
  <table>
+ 	<th>Nome de Usuario:</th>
+ </table>
+ <table>
  	<tr>
- 		<th>Nome de Usuario</th>
- 		
+ 		<form action="/php/editNome.php?id=<?= $id?>" method="POST">
+ 			<td><input type="text" name="nome" value="<?= $user['nome']?>"></td>
+ 			<td><label>Novo Nome:<input type="text" name="novo" required></label></td>
+ 			<td><input type="submit" value="confirmar"></td>
+
+ 		</form>
  	</tr>
  </table>
-<table>
-	<tr>
-		<td><?= $user['nome'] ?></td>
-		<td><a href="editnomeForm.php?id=<?= $user['id']?>">editar</a></td>
-	</tr>
-</table>
+
+  <table>
+ 	<th>E-mail:</th>
+ </table>
+ <table>
+ 	<tr>
+ 		<form action="/php/editEmail.php?id=<?= $id?>" method="POST">
+ 			<td><input type="text" name="email" value="<?= $user['email']?>"></td>
+ 			<td><label>Novo E-mail:<input type="text" name="novomail" required></label></td>
+ 			<td><input type="submit" value="confirmar"></td>
+
+ 		</form>
+ 	</tr>
+ </table>
 
  <table>
  	<tr>
- 		<th>Email</th>
- 		
- 	</tr>
- </table>
-<table>
-	<tr>
-		<td><?= $user['email'] ?></td>
-		<td><a href="editemailForm.php?id=<?= $user['id']?>">editar</a></td>
-	</tr>
-</table>
-
-
- <table>
- 	<tr>
- 		<th>Senha</th>
+ 		<th>Senha:</th>
  		
  	</tr>
  </table>
