@@ -1,8 +1,8 @@
 <?php 
 require 'init.php';
 
-$atual = $_POST['nome'];
-$novo = $_POST['novo'];
+$atual = $_POST['email'];
+$novo = $_POST['novomail'];
 
 $user= $_SESSION['usuario'];
 
@@ -15,12 +15,12 @@ $id= $_GET['id'];
   $stmt = $con->prepare("SELECT * FROM usuario WHERE id =?");
   $stmt->execute([$id]);
 
-if($stmt->rowCount() > 0 && $stmt->fetch()['nome'] == $user) {
+if($stmt->rowCount() > 0 && $stmt->fetch()['email'] == $atual) {
    $stmt = $con->prepare("
-       UPDATE usuario SET nome= ? WHERE  id=?
+       UPDATE usuario SET email= ? WHERE  id=?
        ");
    $stmt->execute([$novo,$id]);
-   $_SESSION['usuario']=$novo;
+   $atual=$novo;
    }
 
 
