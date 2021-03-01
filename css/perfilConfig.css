@@ -1,0 +1,77 @@
+.avatar-xl img {
+    width: 110px;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.text-muted {
+    color: #aeb0b4 !important;
+}
+.text-muted {
+    font-weight: 300;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #e8eaeb;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.centered {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+p{
+    font-size: 11pt;
+}
+
+/*Estilização do rodapé*/
+
+.imagensRodape{
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+}
+
+.list-inline-item:hover{
+    filter: invert(30%);
+}
+
+.funcionalidades{
+    position:relative;
+    bottom: 50px;
+}
+
+a.btn-outline-info{
+    color: #ffffff !important;
+    background-color: transparent;
+    border-color: #27436F !important;
+}
+
+a.btn-outline-info:hover{
+    background-color: #979797 !important;
+    color: #FFFFFF !important;
+}
+

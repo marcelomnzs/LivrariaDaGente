@@ -22,7 +22,7 @@ $usuario_id=$_SESSION['id'];
 
 
 
-require '../conect.php';
+require './conect.php';
 
 $stmt=$con->prepare("SELECT * FROM livro WHERE id=?");
 $stmt->execute([$livro_id]);

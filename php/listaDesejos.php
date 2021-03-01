@@ -15,7 +15,7 @@
 
 	<?php
 	include 'init.php';
-	include '../conect.php';
+	include './conect.php';
 
 	$usuario = $_SESSION['usuario'];
 	$id_sessao = (int) $_SESSION['id'];

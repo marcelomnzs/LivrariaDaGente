@@ -1164,8 +1164,9 @@ div.col-md-6{
 /*Estilização do rodapé*/
 
 .imagensRodape{
-    width: 60%;
-    height: 60%;
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
 }
 
 .list-inline-item:hover{

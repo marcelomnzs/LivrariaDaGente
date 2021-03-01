@@ -16,7 +16,7 @@
 
 $pesquisa= $_POST['pesquisar'];
 
-include '../conect.php';
+include './conect.php';
 
 
 $stmt = $con->prepare("SELECT * FROM livro WHERE titulo LIKE :pesquisa OR autor LIKE :pesquisa OR genero LIKE :pesquisa OR subtitulo LIKE :pesquisa  OR edicao LIKE :pesquisa OR isbn LIKE :pesquisa OR estado LIKE :pesquisa OR valor LIKE :pesquisa");
@@ -29,10 +29,12 @@ while ($livros = $stmt->fetch()){
 		$nome_livro = $livros['titulo'];
 		$autor_livro = $livros['autor'];
 		$subtitulo_livro = $livros['subtitulo'];
+
 		
+echo"<h1 id='margin'>Resultados da Pesquisa</h1>";
 echo"<div class='container'>
 			<div class='row'>
-				<div class='col-md-6 '>
+				<div class='col-md-6 centered'>
 					<div class='well well-sm'>
 						<div class='row'>
 							<div class='col-xs-3 col-md-3 text-center'>
@@ -66,10 +68,6 @@ echo"<div class='container'>
 					</div>
 				</div>
 			</div>";
-
-
-
-
 
 } 
 
