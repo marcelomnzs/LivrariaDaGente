@@ -1273,3 +1273,8 @@ span.func{
   
     z-index: 1;
 }
+
+footer a{
+    text-decoration: none;
+    color: black !important;
+}

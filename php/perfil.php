@@ -130,44 +130,44 @@
       </div>
       <!-- Footer -->
       <hr class="p-0 m-0 b-0">
-      <footer class="bg-white">
-        <div class="container py-5">
-          <div class="row py-3">
-            <div class="col-md-4 pl-5">
-              <h6 class="text-uppercase font-weight-bold mb-4">Sobre</h6>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2"><a href="#" class="text-muted">Fale Conosco</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">Sobre Nós</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h6 class="text-uppercase font-weight-bold mb-4">Ajuda</h6>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2"><a href="#" class="text-muted">Como funciona o pagamento?</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">Envio</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">Cancelamento</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">Retorno</a></li>
-              </ul>
-            </div>
-
-            <div class="col-md-4">
-              <h6 class="text-uppercase font-weight-bold mb-4">Endeço Físico e telefone</h6>
-              <p class="text-muted mb-4">Rua Fitícia - Virando a esquina, 380. (81)3548-1234</p>
-              <ul class="list-inline mt-4">
-                <li class="list-inline-item "><a href="#" target="_blank" title="twitter"><img class="imagensRodape" src="../img/twitter.png" alt=""></a></li>
-                <li class="list-inline-item "><a href="#" target="_blank" title="facebook"><img class="imagensRodape" src="../img/facebook-novo.png" alt=""></a></li>
-                <li class="list-inline-item "><a href="https://www.instagram.com/livrariadagente9/" target="_blank" title="instagram"><img class="imagensRodape" src="../img/instagram-novo.png" alt=""></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <hr class="p-0 m-0 b-0">
-        <div class="bg-light py-2">
-          <div class="container text-center">
-            <p class="text-muted mb-0 py-2">© 2021 Livraria da gente&trade; Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
+      <!-- Footer -->
+  <footer class="bg-white">
+     <div class="container py-5">
+         <div class="row py-3">
+             <div class="col-md-4 pl-5">
+                 <h6 class="text-uppercase font-weight-bold mb-4"><a href="sobre.php">Sobre</a></h6>
+                 <ul class="list-unstyled mb-0">
+                   <li class="mb-2"><a href="sobre.php#quem-somos" class="text-muted">Sobre Nós</a></li>
+                   <li class="mb-2"><a href="sobre.php#fale-conosco" class="text-muted">Fale Conosco</a></li>
+                   <li class="mb-2"><a href="sobre.php#equipe" class="text-muted">Conheça nossa equipe</a></li>
+                 </ul>
+             </div>
+             <div class="col-md-4">
+                 <h6 class="text-uppercase font-weight-bold mb-4">Ajuda</h6>
+                 <ul class="list-unstyled mb-0">
+                     <li class="mb-2"><a href="sobre.php#pagamento" class="text-muted">Como funciona o pagamento?</a></li>
+                     <li class="mb-2"><a href="sobre.php#envio" class="text-muted">Envio</a></li>
+                 </ul>
+             </div>
+        
+             <div class="col-md-4">
+                 <h6 class="text-uppercase font-weight-bold mb-4">Endeço Físico e telefone</h6>
+                 <p class="text-muted mb-4">Rua Fitícia - Virando a esquina, 380. (81)3548-1234</p>
+                 <ul class="list-inline mt-4">
+                     <li class="list-inline-item "><a href="#" target="_blank" title="twitter"><img class="imagensRodape" src="../img/twitter.png" alt=""></a></li>
+                     <li class="list-inline-item "><a href="#" target="_blank" title="facebook"><img class="imagensRodape" src="../img/facebook-novo.png" alt=""></a></li>
+                     <li class="list-inline-item "><a href="https://www.instagram.com/livrariadagente9/" target="_blank" title="instagram"><img class="imagensRodape" src="img/instagram-novo.png" alt=""></a></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+     <hr class="p-0 m-0 b-0">
+     <div class="bg-light py-2">
+         <div class="container text-center">
+             <p class="text-muted mb-0 py-2">© 2021 Livraria da gente&trade; Todos os direitos reservados.</p>
+         </div>
+     </div>
+ </footer>
 
       <script src="../perfil.js"></script>
 

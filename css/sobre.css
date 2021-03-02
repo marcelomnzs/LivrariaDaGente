@@ -1,7 +1,31 @@
-img#logo{
-    position: relative;
-    height: 70px;
-    width: 40px;
-    top:3px;
-    left: 35px;
+/*Import da Font-Family Lato (com o estilo Bold)*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
 }
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }

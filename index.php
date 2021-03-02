@@ -39,13 +39,13 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="img/Carrossel1-Teste.png" alt="A livraria da Gente tem o objetivo de difundir a leitura para todos!">
+        <img class="d-block w-100" src="img/Carrossel1.png" alt="A livraria da Gente tem o objetivo de difundir a leitura para todos!">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="img/Carrossel1-Teste.png" alt="Feliz dia do Livro">
+        <img class="d-block w-100" src="img/Carrossel2.png" alt="Feliz dia do Livro">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="img/Carrossel1-Teste.png" alt="Uma livraria feita por você, para você!">
+        <img class="d-block w-100" src="img/Carrossel3.png" alt="Uma livraria feita por você, para você!">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -63,19 +63,18 @@
      <div class="container py-5">
          <div class="row py-3">
              <div class="col-md-4 pl-5">
-                 <h6 class="text-uppercase font-weight-bold mb-4">Sobre</h6>
+                 <h6 class="text-uppercase font-weight-bold mb-4"><a href="php/sobre.php">Sobre</a></h6>
                  <ul class="list-unstyled mb-0">
-                     <li class="mb-2"><a href="#" class="text-muted">Fale Conosco</a></li>
-                     <li class="mb-2"><a href="#" class="text-muted">Sobre Nós</a></li>
+                   <li class="mb-2"><a href="php/sobre.php#quem-somos" class="text-muted">Sobre Nós</a></li>
+                   <li class="mb-2"><a href="php/sobre.php#fale-conosco" class="text-muted">Fale Conosco</a></li>
+                   <li class="mb-2"><a href="php/sobre.php#equipe" class="text-muted">Conheça nossa equipe</a></li>
                  </ul>
              </div>
              <div class="col-md-4">
                  <h6 class="text-uppercase font-weight-bold mb-4">Ajuda</h6>
                  <ul class="list-unstyled mb-0">
-                     <li class="mb-2"><a href="#" class="text-muted">Como funciona o pagamento?</a></li>
-                     <li class="mb-2"><a href="#" class="text-muted">Envio</a></li>
-                     <li class="mb-2"><a href="#" class="text-muted">Cancelamento</a></li>
-                     <li class="mb-2"><a href="#" class="text-muted">Retorno</a></li>
+                     <li class="mb-2"><a href="php/sobre.php#pagamento" class="text-muted">Como funciona o pagamento?</a></li>
+                     <li class="mb-2"><a href="php/sobre.php#envio" class="text-muted">Envio</a></li>
                  </ul>
              </div>
         
