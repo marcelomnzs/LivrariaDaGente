@@ -1,33 +1,33 @@
 <?php 
 require 'init.php';
 
-$atual = $_POST['nome'];
-$novo = $_POST['novo'];
-
+$nome = $_POST['nome'];
 $user= $_SESSION['usuario'];
+$email = $_POST['email'];
+
 
 $id= $_GET['id'];
 
+   require '../conect.php';
 
-
-   require './conect.php';
 
   $stmt = $con->prepare("SELECT * FROM usuario WHERE id =?");
   $stmt->execute([$id]);
-
-if($stmt->rowCount() > 0 && $stmt->fetch()['nome'] == $user) {
+if($stmt->rowCount() > 0) {
    $stmt = $con->prepare("
-       UPDATE usuario SET nome= ? WHERE  id=?
+       UPDATE usuario SET nome= ?, email= ? WHERE  id=?
        ");
-   $stmt->execute([$novo,$id]);
-   $_SESSION['usuario']=$novo;
+   $stmt->execute([$nome,$email,$id]);
+   $_SESSION['usuario']=$nome;
+
    }
 
 
 
+
+
+
+
+
 header('location:perfil.php');
-
-
-
-
  ?>

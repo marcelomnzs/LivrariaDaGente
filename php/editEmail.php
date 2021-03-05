@@ -10,7 +10,7 @@ $id= $_GET['id'];
 
 
 
-   require './conect.php';
+   require '../conect.php';
 
   $stmt = $con->prepare("SELECT * FROM usuario WHERE id =?");
   $stmt->execute([$id]);

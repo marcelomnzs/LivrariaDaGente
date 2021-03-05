@@ -1,6 +1,6 @@
 <?php 
 require 'init.php';
-include './conect.php';
+include '../conect.php';
 
 $nome= $_POST['nome'];
 $autor= $_POST['autor'];

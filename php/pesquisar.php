@@ -16,7 +16,7 @@
 
 $pesquisa= $_POST['pesquisar'];
 
-include './conect.php';
+include '../conect.php';
 
 
 $stmt = $con->prepare("SELECT * FROM livro WHERE titulo LIKE :pesquisa OR autor LIKE :pesquisa OR genero LIKE :pesquisa OR subtitulo LIKE :pesquisa  OR edicao LIKE :pesquisa OR isbn LIKE :pesquisa OR estado LIKE :pesquisa OR valor LIKE :pesquisa");

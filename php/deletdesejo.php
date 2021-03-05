@@ -1,6 +1,6 @@
 <?php
 	include 'init.php';
-	include './conect.php';
+	include '../conect.php';
 	$livro_id =(int) $_GET['id'];
 	$user_id = $_SESSION['id'];
 

@@ -56,10 +56,10 @@
 								</div>
 							</div>
 							<hr>
-							<div class="img-fluid col-md-3 float-right">
+							<div class="img-fluid col-md-3 ml-3 mt-3 float-right">
 								<img src="img/editarPerfil.png" alt="">
 							</div>
-							<form action="/php/editNome.php?id=<?= $id ?>" method="POST">
+							<form action="php/editNome.php?id=<?= $id ?>" method="POST">
 								<div class="form-row">
 									<div class="form-group col-md-12">
 										<label for="firstname">Nome de Usuário:</label>
@@ -69,7 +69,7 @@
 								<div class="form-row">
 									<div class="form-group col-md-12">
 										<label for="firstname">E-mail:</label>
-										<input type="text" id="email" value="<?= $user['email'] ?>" class="form-control" placeholder="livriadagent@email.com">
+										<input type="text" name="email" value="<?= $user['email'] ?>" class="form-control" placeholder="livriadagent@email.com">
 									</div>
 
 								</div>
@@ -93,9 +93,9 @@
 										</ul>
 									</div>
 								</div>
+						<button type="submit" class="btn btn-outline-primary col-md-5 ml-1 my-3">Sair e Salvar Alterações</button>
 							</form>
 						</div>
-						<button type="submit" class="btn btn-outline-primary col-md-3 ml-1 mb-3">Salvar Alterações</button>
 					</div>
 				</div>
 			</div>
