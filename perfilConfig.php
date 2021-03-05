@@ -76,12 +76,12 @@
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="inputPassword5">Senha Atual</label>
-										<input type="password" class="form-control" id="inputPassword5" placeholder="Senha Atual">
+										<input type="password" name="senha" class="form-control" id="inputPassword5" placeholder="Senha Atual">
 									</div>
 
 									<div class="form-group col-md-6">
 										<label for="inputPassword5">Nova Senha</label>
-										<input type="password" class="form-control" id="inputPassword5" placeholder="Nova Senha">
+										<input type="password" name="newSenha" class="form-control" id="inputPassword5" placeholder="Nova Senha">
 									</div>
 
 									<div class="col-md-8 mt-2">
@@ -93,7 +93,7 @@
 										</ul>
 									</div>
 								</div>
-						<button type="submit" class="btn btn-outline-primary col-md-5 ml-1 my-3">Sair e Salvar Alterações</button>
+						<button type="submit" class="btn btn-outline-primary col-md-5 ml-1 my-3">Salvar Alterações</button>
 							</form>
 						</div>
 					</div>
