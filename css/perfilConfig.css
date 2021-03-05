@@ -64,14 +64,12 @@ p{
     bottom: 50px;
 }
 
-a.btn-outline-info{
-    color: #ffffff !important;
-    background-color: transparent;
-    border-color: #27436F !important;
+.btn-outline-primary{
+    color: #27436F !important;
+    border: solid 1px #27436F !important;
 }
 
-a.btn-outline-info:hover{
-    background-color: #979797 !important;
-    color: #FFFFFF !important;
+.btn-outline-primary:hover{
+    color: white !important;
+    background-color: #27436F !important;
 }
-
