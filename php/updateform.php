@@ -9,9 +9,9 @@
     $usuario = $_SESSION['usuario'];
 
     //Read da Tabela de Livros
-    $stmt = $con->prepare("SELECT * from livro WHERE id = ? ;");
+    $stmt = $con->prepare("SELECT * FROM livro WHERE id = ? ;");
     $stmt->execute([$id_livro]);
-    $livros = $stmt->fetchAll();
+    $livros = $stmt->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label>Nome do Livro:</label>
-                <input type="text" name="titulo" class="form-control" placeholder="Nome do Livro" value="<?= $livros['nome'] ?>">
+                <input type="text" name="titulo" class="form-control" placeholder="Nome do Livro" value="<?= $livros['titulo'] ?>">
             </div>
 
             <div class="col-md-4 mb-3">

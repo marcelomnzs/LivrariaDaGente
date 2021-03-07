@@ -1,5 +1,32 @@
 <?php require 'init.php'; ?>
 <?php if (isset($_SESSION['usuario'])) : ?>
+  <?php 
+$usuario= $_SESSION['usuario'];
+$usuario_id= (int) $_SESSION['id'];
+
+include '../conect.php';
+
+$stmt = $con->prepare("SELECT count(*) as liv FROM livro WHERE usuario_id =?");
+$stmt->execute([$usuario_id]);
+$livros= $stmt->fetch();
+
+   ?>
+
+<?php 
+
+
+$usuario= $_SESSION['usuario'];
+$usuario_id= (int) $_SESSION['id'];
+
+$stmt = $con->prepare("SELECT count(saldo) as coin FROM usuario WHERE id =?");
+$stmt->execute([$usuario_id]);
+$saldo= $stmt->fetch();
+
+
+
+
+ ?>
+
   <!DOCTYPE html>
   <html lang="en">
 
@@ -55,15 +82,15 @@
             <h3 class="title"><?= $_SESSION['usuario'] ?></h3>
             <div class="content">
               <div class="info-usuario mt-4">
-                <h2>26</h2>
+                <h2><?= $livros['liv'] ?></h2>
                 <p>Livros</p>
               </div>
               <div class="info-usuario mt-4">
-                <h2>550</h2>
+                <h2><?= $saldo['coin'] ?></h2>
                 <p>Pagecoins</p>
               </div>
               <div class="info-usuario mt-4">
-                <h2>3</h2>
+                <h2><?= $livros['liv'] ?></h2>
                 <p>Livros Doados</p>
               </div>
             </div>
