@@ -16,13 +16,6 @@
 
 	<?php foreach ($users as $user) : ?>
 
-		<!-- 
-		<form action="/php/editEmail.php?id=<?= $id ?>" method="POST">
-						
-						</form> -->
-
-
-
 		<!DOCTYPE html>
 		<html lang="pt-br">
 
@@ -32,6 +25,7 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Meu Perfil</title>
 			<link rel="stylesheet" href="css/perfilConfig.css">
+			<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-96x96.png">
 		</head>
 
 		<body>

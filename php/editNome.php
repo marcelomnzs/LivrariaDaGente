@@ -9,7 +9,7 @@ $new_senha=$_POST['newSenha'];
 
 $id= $_GET['id'];
 
-   require '../conect.php';
+   require './conect.php';
 
 if($senha===$new_senha){ 
 

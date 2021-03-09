@@ -2,7 +2,7 @@
 
 <?php if (isset($_SESSION['usuario'])) : ?>
 
-    <?php $id_livro = $_GET['id'];
+    <?php $id_livro = (int) $_GET['id'];
 
     include './conect.php';
 

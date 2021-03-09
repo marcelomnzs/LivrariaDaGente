@@ -4,7 +4,7 @@
 $usuario= $_SESSION['usuario'];
 $usuario_id= (int) $_SESSION['id'];
 
-include '../conect.php';
+include './conect.php';
 
 $stmt = $con->prepare("SELECT count(*) as liv FROM livro WHERE usuario_id =?");
 $stmt->execute([$usuario_id]);
@@ -28,7 +28,7 @@ $saldo= $stmt->fetch();
  ?>
 
   <!DOCTYPE html>
-  <html lang="en">
+  <html lang="pt-br">
 
   <?php
   include "linksbootstrap.php";

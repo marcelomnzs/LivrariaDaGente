@@ -1,96 +1,77 @@
-.glyphicon {
-    margin-right: 5px;
+.img-thumbnail {
+    height: 170px;
 }
 
-.section-box h2 {
-    margin-top: 0px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.section-box h2 a {
-    font-size: 15px;
+#ads {
+    margin: 30px 0 30px 0 !important;
 }
 
-.glyphicon-heart {
-    color: #e74c3c;
+#ads .card-detail-badge {
+    background: #27436F !important;
+    text-align: center !important;
+    border-radius: 30px 30px 30px 30px !important;
+    color: #ffffff !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
 }
 
-.glyphicon-comment {
-    color: #27ae60;
+#ads .card-image-overlay {
+    font-size: 20px !important;
 }
 
-.separator {
-    padding-right: 5px;
-    padding-left: 5px;
+#ads .card-image-overlay span {
+    display: inline-block !important;
 }
 
-.section-box hr {
-    margin-top: 0;
-    margin-bottom: 5px;
-    border: 0;
-    border-top: 1px solid rgb(199, 199, 199);
+#ads h4 {
+    font-size: 19px !important;
+    font-weight: 600 !important;
 }
 
-.section-box{
-    position: relative;
-    top: 13px;
+.btn-outline-primary{
+    color: #27436F !important;
+    border: solid 1px #27436F !important;
 }
 
-.container{
-    position: relative; 
-    margin-top: 10px !important;
-    margin: 0 ;
-    margin-left: 0 !important;
-    padding: 0 !important;
-}
-
-h1 ,h5#nada{
-    text-align: center;
-}
-
-button#addLivro{
-    position: absolute;
-    background-color: #27436F;
-    width: 210px;
-    height: 30px;
-    border:none;
-    color: white;
-    z-index: 1;
-    left: 41.9%;
-    top: 11.5%;
-}
-
-button#zeroLivro{
-    position: relative;
-    background-color: #27436F;
-    width: 210px;
-    height: 30px;
-    border:none;
-    color: white;
-    left: 42%;
-    margin-top:10px;
-    margin-bottom: 20px;
+.btn-outline-primary:hover{
+    color: white !important;
+    background-color: #27436F !important;
 }
 
 .excluir{
+    color: #dc3545!important;
+    border: solid 1px #dc3545 !important; 
+}
+
+.excluir:hover{
+    color: white !important;
+    background-color: #dc3545 !important;
+}
+
+.editar{
+    color: #ffca2c!important;
+    border: solid 1px #ffca2c !important; 
+}
+
+.editar:hover{
+    color: white !important;
+    background-color: #ffca2c !important;
+}
+
+h1{
     position: relative;
-    top: 5px;
+    top: 70px;
 }
 
-.alterar{
+a.add{
+    text-decoration: none;
     position: relative;
-    top: 5px;
-}
-
-.col-md-6{
-    position: relative;
-    left: 100px;
-}
-
-.centered {
-    margin: 0 auto !important;
-    float: none !important;
-}
-
-h1#margin{
-    margin-bottom: 60px;
+    bottom: 125px;
+    left: 78px;
 }
