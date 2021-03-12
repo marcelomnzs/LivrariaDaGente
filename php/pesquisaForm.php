@@ -9,7 +9,7 @@
 
 <div class="container">
 	<div class="row mb-5">
-		<div class="background pt-4 rounded shadow centered col-md-6">
+		<div class="background pt-4 rounded centered col-md-6">
 			<form action="pesquisar.php" method="POST">
 				<label class="col-md-12">
 			        <p class="label-txt text-center"><strong>Pesquisa</strong></p>

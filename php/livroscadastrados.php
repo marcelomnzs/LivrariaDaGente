@@ -25,35 +25,43 @@
 	$stmt->execute([$id_sessao]);
 	$livros = $stmt->fetchAll();
 
-	//Condição que verifica se o usuário possui livros, caso não ele recebe uma mensagem
-	if (sizeof($livros) == 0) {
-		echo "<h1>Meu acervo</h1>";
-		echo "
-			<div class='float-right'>
-				<img src='../img/meuAcervo.png'>
-			</div>
-		";
-		echo "<h5 id='nada'>Me parece que você ainda não tem livros, pressione o botão abaixo para adicionar livros a sua coleção</h5>";
-		echo '<a href="addlivro.php"><button type="submit" id="zeroLivro" class="mxauto">Adicionar Livro</button></a>';
-		exit();
-	}
-
-
 	?>
+	<!-- Condição que verifica se o usuário possui livros, caso não ele recebe uma mensagem -->
 
-	<div class="container">
-		<div class="mt-4 row">
-			<div class='col-md-6'>
-				<img src='../img/meuAcervo.png'>
+	<?php if (sizeof($livros) == 0) : ?>
+		<div class="container">
+			<div class="mt-4 row">
+				<div class='col-md-6'>
+					<img src='../img/meuAcervo.png'>
+				</div>
+				<div class="mt-5 col-md-6">
+					<h1>Meu acervo</h1>
+					<a class="voltar alert-link" href="perfil.php">Voltar ao perfil</a>
+				</div>
 			</div>
-			<div class="mt-5 col-md-6">
-				<h1>Meu acervo</h1>
+			<div class="text-center">
+				<a href="addlivro.php" class="btn-lg btn-outline-primary add">Adicionar Livro</a>
+			</div>
+			<h5 class="text-center frase">Me parece que você ainda não tem livros <strong>:(</strong> , pressione o botão acima para adicionar livros a sua coleção!</h5>
+		</div>
+	<?php else : ?>
+
+		<div class="container">
+			<div class="mt-4 row">
+				<div class='col-md-6'>
+					<img src='../img/meuAcervo.png'>
+				</div>
+				<div class="mt-5 col-md-6">
+					<h1>Meu acervo</h1>
+					<a class="voltar alert-link" href="perfil.php">Voltar ao perfil</a>
+				</div>
+			</div>
+			<div class="text-center">
+				<a href="addlivro.php" class="btn-lg btn-outline-primary add">Adicionar Livro</a>
 			</div>
 		</div>
-		<div class="text-center">
-			<a href="addlivro.php" class="btn-lg btn-outline-primary add">Adicionar Livro</a>
-		</div>
-	</div>
+
+	<?php endif ?>
 
 
 
@@ -86,7 +94,6 @@
 							</div>
 							<div class="btn-group" role="group">
 								<a href='deletlivros.php?id= <?= $id_livro ?>' class="btn-lg btn-outline-primary excluir mr-2">Excluir Livro</a>
-								<!-- <a href="deletlivros.php?id= . '<?= $livro['id'] ?>'"  class="btn-lg btn-outline-primary excluir mr-2">Excluir Livro</a> -->
 								<a href='updateform.php?id= <?= $id_livro ?>' class="btn-lg btn-outline-primary editar mr-2">Editar Livro</a>
 							</div>
 						</div>

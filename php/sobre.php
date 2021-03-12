@@ -32,11 +32,11 @@
           <h2 class="font-weight-light" id="quem-somos">Quem somos?</h2>
           <p class="font-italic text-muted mb-4">A livraria da gente é um site sem fins lucrativos com o objetivo de difundir e facilitar o acesso à leitura no nosso país, pois a leitura é essencial para a educação e formação do ser humano. Desenvolvido por um time de estudantes do Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco - Campus Igarassu, o site visa promover a leitura independente de classe social ou idade.</p>
         </div>
-        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="../img/livroMeditando.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img loading="lazy" src="../img/livroMeditando.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
       </div>
       <hr>
       <div class="row align-items-center pt-5">
-        <div class="col-lg-5 pb-5 mx-auto"><img src="../img/bibliotecaDigital.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-5 pb-5 mx-auto"><img loading="lazy" src="../img/bibliotecaDigital.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
         <div class="col-lg-6">
           <h2 class="font-weight-light" id="pagamento">Como funciona o pagamento?</h2>
           <p class="font-italic text-muted mb-4">Como dito acima, o site não possui fins lucrativos. Portanto, a livraria da Gente possui a sua própria moeda virtual a <strong>Pagecoin</strong>. Com ela o usuário consegue comprar livros sem a necessidade de utilizar nenhuma moeda "real". As pagecoins podem ser obtidas doando livros a plataforma ou fazendo atividades semanais estipuladas nas redes sociais da livraria.</p>
@@ -48,11 +48,11 @@
           <h2 class="font-weight-light" id="envio">Como funciona o envio?</h2>
           <p class="font-italic text-muted mb-4">Sobre a retirada, após a compra os livros podem ser retirados em nosso endereço físico. Ou podem ser recebidos pelo envio dos mesmos via agência de entregas (Correios, FedEX etc.) de preferência do usuário, sendo de <Strong>total responsabilidade</Strong> do mesmo arcar com os custos do envio.</p>
         </div>
-        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="../img/delivery.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img loading="lazy" src="../img/delivery.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
       </div>
       <hr>
       <div class="row align-items-center pt-5">
-        <div class="col-lg-5 px-5 mx-auto"><img src="../img/faleConosco.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-5 px-5 mx-auto"><img loading="lazy" src="../img/faleConosco.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
         <div class="col-lg-6">
           <h2 class="font-weight-light" id="fale-conosco">Fale conosco</h2>
           <p class="font-italic text-muted mb-4">Você pode entrar em contato conosco atrevés de todas as nossas redes sociais e também pelo nosso telefone (81)3548-1234.</p>

@@ -69,9 +69,20 @@ h1{
     top: 70px;
 }
 
+.voltar{
+    position: relative;
+    top: 110px;
+    left: 27px;
+    color: black;
+}
+
 a.add{
     text-decoration: none;
     position: relative;
     bottom: 125px;
     left: 78px;
+}
+
+.frase{
+    margin-top: 100px;
 }
