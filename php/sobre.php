@@ -87,7 +87,7 @@
 
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="../img/arthur.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Arthur Lima</h5><span class="small text-uppercase text-muted"><strong>IPI</strong> - Informática para internet</span>
             <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="https://github.com/RATARIA" target="_blank" class="social-link"><i class="fab fa-github"></i></a></li>
@@ -140,12 +140,12 @@
 
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 ">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="../img/tuanno.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Tuanno Barbosa</h5><span class="small text-uppercase text-muted"><strong>TSI</strong> - Tecnologia em Sistemas para internet</span>
             <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="https://github.com/Tuanno" target="_blank" class="social-link"><i class="fab fa-github"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/tuannodanyllo/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/tuanno-danyllo-685439179" class="social-link"><i class="fa fa-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
